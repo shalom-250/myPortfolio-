@@ -20,6 +20,20 @@ const projects = [
             { label: "Security", value: "AES-256" },
             { label: "Active Users", value: "10K+" }
         ]
+    },
+    {
+        id: 2,
+        title: "Luxury E-Commerce",
+        category: "Web App",
+        usp: "Premium User Experience Design & Development",
+        description: "A high-end retail experience for premium fashion brands.",
+        details: "This bespoke e-commerce platform focuses on visual storytelling and cinematic product reveals. Featuring a custom headless CMS integration and a high-performance checkout flow optimized for conversions.",
+        tech: ["React", "Next.js", "Shopify Engine", "Framer Motion", "Stripe"],
+        stats: [
+            { label: "Lighthouse", value: "100/100" },
+            { label: "Conversions", value: "+45%" },
+            { label: "Mobile Ready", value: "100%" }
+        ]
     }
 ];
 
@@ -27,6 +41,8 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
     const { id } = use(params);
     // Find project by ID
     const project = projects.find(p => p.id === parseInt(id)) || projects[0];
+
+    const isLuxuryProject = project.id === 2;
 
     return (
         <div className="pt-32 pb-24 min-h-screen bg-background">
@@ -50,6 +66,20 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
                         <h1 className="text-5xl md:text-7xl font-heading font-extrabold mb-8 leading-tight">
                             {project.title}
                         </h1>
+
+                        {isLuxuryProject && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.3 }}
+                                className="mb-10 p-6 bg-accent-red/10 border-l-4 border-accent-red rounded-r-2xl"
+                            >
+                                <p className="text-xl font-heading font-bold text-accent-red uppercase tracking-tighter">
+                                    Premium User Experience Design & Development
+                                </p>
+                            </motion.div>
+                        )}
+
                         <p className="text-xl text-muted mb-10 leading-relaxed">
                             {project.details}
                         </p>
@@ -71,13 +101,31 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
                             ))}
                         </div>
 
-                        <div className="flex space-x-6">
-                            <button className="flex-1 bg-accent-red hover:bg-red-600 text-white py-4 rounded-2xl font-bold flex items-center justify-center transition-all shadow-lg shadow-red-500/20">
-                                Live Preview <ExternalLink size={20} className="ml-2" />
-                            </button>
-                            <button className="flex-1 bg-secondary hover:bg-secondary/80 text-foreground py-4 rounded-2xl font-bold flex items-center justify-center transition-all border border-border/50">
+                        <div className="flex flex-col sm:flex-row gap-6">
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 px-8 py-4 bg-accent-red hover:bg-red-600 text-white rounded-2xl font-bold flex items-center justify-center transition-all shadow-xl shadow-red-500/20 hover:shadow-red-500/40 hover:-translate-y-1 relative overflow-hidden group"
+                            >
+                                <span className="relative z-10 flex items-center">
+                                    Live Preview <ExternalLink size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                                <motion.div
+                                    className="absolute inset-0 bg-white/20"
+                                    initial={{ x: "-100%" }}
+                                    whileHover={{ x: "100%" }}
+                                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                                />
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 px-8 py-4 bg-secondary hover:bg-secondary/80 text-foreground py-4 rounded-2xl font-bold flex items-center justify-center transition-all border border-border/50 hover:-translate-y-1"
+                            >
                                 Source Code <FaGithub size={20} className="ml-2" />
-                            </button>
+                            </a>
                         </div>
                     </motion.div>
 

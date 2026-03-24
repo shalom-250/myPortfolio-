@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2">
                         <Link href="/" className="text-3xl font-heading font-bold tracking-tighter mb-4 flex items-center space-x-2">
                             <Image src="/logo.png" alt="Shalom Dev" width={40} height={40} className="rounded-md" />
-                            <span>Shalom<span className="text-accent-red">.</span></span>
+                            <span>Shalom Dev<span className="text-accent-red">.</span></span>
                         </Link>
                         <p className="text-muted max-w-sm mt-4 text-sm leading-relaxed">
                             Building Scalable Systems with Precision & Elegance. Luxury Web & Mobile Experiences Engineered for Performance.

@@ -11,7 +11,7 @@ export default function Login() {
 
     return (
         <div className="min-h-screen bg-background flex flex-col items-center justify-center relative overflow-hidden p-6 text-white">
-            <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-background to-background z-0"></div>
+            <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent-red/10 via-background to-background z-0"></div>
 
             <Link href="/" className="absolute top-8 left-8 text-muted hover:text-white transition-colors flex items-center z-20">
                 <ArrowLeft size={20} className="mr-2" /> Back to Home
@@ -26,7 +26,7 @@ export default function Login() {
                 <div className="text-center mb-8">
                     <Link href="/" className="text-3xl font-heading font-bold tracking-tighter mb-2 flex items-center justify-center space-x-2">
                         <Image src="/logo.png" alt="Shalom Dev" width={36} height={36} className="rounded-md" />
-                        <span>Shalom<span className="text-accent">.</span></span>
+                        <span>Shalom Dev<span className="text-accent-red">.</span></span>
                     </Link>
                     <h2 className="text-xl font-medium mt-4">Client Portal</h2>
                     <p className="text-muted text-sm mt-2">
@@ -45,9 +45,18 @@ export default function Login() {
                                 <input
                                     type="text"
                                     required
-                                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                    className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent-red focus:ring-1 focus:ring-accent-red transition-all"
                                     placeholder="John Doe"
                                 />
+                                <div className="mt-5">
+                                    <label className="block text-sm font-medium text-white/80 mb-2">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        required
+                                        className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent-red focus:ring-1 focus:ring-accent-red transition-all"
+                                        placeholder="+250 788 000 000"
+                                    />
+                                </div>
                             </motion.div>
                         )}
                     </AnimatePresence>
@@ -61,7 +70,7 @@ export default function Login() {
                             <input
                                 type="email"
                                 required
-                                className="w-full bg-background/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                className="w-full bg-background/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:outline-none focus:border-accent-red focus:ring-1 focus:ring-accent-red transition-all"
                                 placeholder="john@example.com"
                             />
                         </div>
@@ -76,7 +85,7 @@ export default function Login() {
                             <input
                                 type="password"
                                 required
-                                className="w-full bg-background/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
+                                className="w-full bg-background/50 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white focus:outline-none focus:border-accent-red focus:ring-1 focus:ring-accent-red transition-all"
                                 placeholder="••••••••"
                             />
                         </div>
@@ -84,7 +93,7 @@ export default function Login() {
 
                     <Link
                         href="/dashboard"
-                        className="w-full py-3.5 bg-accent hover:bg-orange-600 text-white rounded-xl shadow-[0_0_20px_rgba(237,112,20,0.3)] transition-all flex items-center justify-center font-medium mt-6"
+                        className="w-full py-3.5 bg-accent-red hover:bg-red-600 text-white rounded-xl shadow-[0_0_20px_rgba(255,49,49,0.3)] transition-all flex items-center justify-center font-medium mt-6"
                     >
                         {isLogin ? "Sign In" : "Create Account"} <ArrowRight size={18} className="ml-2" />
                     </Link>

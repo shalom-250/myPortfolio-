@@ -40,7 +40,7 @@ export default function Navbar() {
             <div className="container mx-auto px-6 flex items-center justify-between">
                 <Link href="/" className="text-2xl font-heading font-bold tracking-tighter flex items-center space-x-2">
                     <Image src="/logo.png" alt="Shalom Dev" width={32} height={32} className="rounded-md" />
-                    <span className="text-foreground">Shalom<span className="text-accent-red">.</span></span>
+                    <span className="text-foreground">Shalom Dev<span className="text-accent-red">.</span></span>
                 </Link>
                 <div className="hidden md:flex items-center space-x-8">
                     {navLinks.map((link) => (
@@ -54,6 +54,12 @@ export default function Navbar() {
                     ))}
                     <div className="flex items-center space-x-4">
                         <ThemeToggle />
+                        <Link
+                            href="/login"
+                            className="text-sm font-bold text-muted hover:text-accent-red transition-all px-4 py-2"
+                        >
+                            Portal
+                        </Link>
                         <Link
                             href="#contact"
                             className="px-6 py-2.5 bg-accent-red hover:bg-red-600 text-white text-sm font-medium rounded-full transition-all shadow-[0_0_15px_rgba(255,49,49,0.3)] hover:shadow-[0_0_25px_rgba(255,49,49,0.5)] transform hover:-translate-y-0.5"
@@ -90,10 +96,17 @@ export default function Navbar() {
                                     {link.name}
                                 </Link>
                             ))}
-                            <div className="pt-4 border-t border-white/10">
+                            <div className="pt-4 border-t border-white/10 flex flex-col space-y-4">
+                                <Link
+                                    href="/login"
+                                    className="text-lg font-medium text-accent-red"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Client Portal
+                                </Link>
                                 <Link
                                     href="#contact"
-                                    className="inline-block px-8 py-3 bg-accent-red text-white text-base font-medium rounded-full shadow-[0_0_15px_rgba(255,49,49,0.3)]"
+                                    className="inline-block px-8 py-3 bg-accent-red text-white text-base font-medium rounded-full text-center shadow-[0_0_15px_rgba(255,49,49,0.3)]"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Hire Me

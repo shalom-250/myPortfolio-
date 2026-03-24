@@ -5,9 +5,9 @@ import { CheckCircle2, Clock, FileText, ArrowUpRight } from "lucide-react";
 
 export default function DashboardOverview() {
     const stats = [
-        { name: "Active Projects", value: "2", icon: FileText, color: "text-blue-400" },
-        { name: "Pending Tasks", value: "5", icon: Clock, color: "text-accent-red" },
-        { name: "Completed Milestones", value: "12", icon: CheckCircle2, color: "text-green-400" },
+        { name: "Active Projects", value: "2", icon: FileText, color: "text-accent-red" },
+        { name: "Pending Tasks", value: "5", icon: Clock, color: "text-yellow-500" },
+        { name: "Completed Milestones", value: "12", icon: CheckCircle2, color: "text-green-500" },
     ];
 
     return (
@@ -85,13 +85,13 @@ export default function DashboardOverview() {
                             </div>
                             <div className="flex items-center space-x-6 sm:space-x-4">
                                 <span className={`text-xs font-medium px-4 py-1.5 rounded-full ${activity.status === "Completed" || activity.status === "Paid"
-                                    ? "bg-green-500/10 text-green-400 border border-green-500/20"
-                                    : "bg-accent/10 text-accent border border-accent/20"
+                                    ? "bg-green-500/10 text-green-500 border border-green-500/20"
+                                    : "bg-accent-red/10 text-accent-red border border-accent-red/20"
                                     }`}>
                                     {activity.status}
                                 </span>
-                                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                                    <ArrowUpRight size={16} className="text-muted group-hover:text-accent transition-colors" />
+                                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent-red/20 transition-colors">
+                                    <ArrowUpRight size={16} className="text-muted group-hover:text-accent-red transition-colors" />
                                 </div>
                             </div>
                         </motion.div>

@@ -36,9 +36,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <div className="h-20 flex items-center justify-between px-6 border-b border-white/5">
                     <Link href="/" className="text-2xl font-heading font-bold tracking-tighter flex items-center space-x-2">
                         <Image src="/logo.png" alt="Shalom Developer" width={28} height={28} className="rounded-md" />
-                        <span>Shalom Dev<span className="text-accent">.</span></span>
+                        <span>Shalom Dev<span className="text-accent-red">.</span></span>
                     </Link>
-                    <button className="lg:hidden text-white hover:text-accent" onClick={() => setSidebarOpen(false)}>
+                    <button className="lg:hidden text-foreground hover:text-accent-red" onClick={() => setSidebarOpen(false)}>
                         <X size={20} />
                     </button>
                 </div>
@@ -51,16 +51,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 key={item.name}
                                 href={item.href}
                                 className={`group relative flex items-center space-x-3 px-4 py-3 rounded-xl transition-all ${isActive
-                                    ? "bg-accent/10 text-accent"
+                                    ? "bg-accent-red/10 text-accent-red"
                                     : "text-muted hover:bg-white/5 hover:text-white"
                                     }`}
                             >
-                                <item.icon size={20} className={isActive ? "text-accent" : "group-hover:text-white text-muted"} />
+                                <item.icon size={20} className={isActive ? "text-accent-red" : "group-hover:text-white text-muted"} />
                                 <span className="font-medium text-sm">{item.name}</span>
                                 {isActive && (
                                     <motion.div
                                         layoutId="sidebar-active"
-                                        className="absolute left-0 top-0 bottom-0 w-1 bg-accent rounded-r-full"
+                                        className="absolute left-0 top-0 bottom-0 w-1 bg-accent-red rounded-r-full"
                                     />
                                 )}
                             </Link>
@@ -70,12 +70,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
                 <div className="absolute bottom-0 w-full p-4 border-t border-white/5">
                     <div className="flex items-center space-x-3 px-4 py-3 mb-2 bg-white/5 rounded-xl">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-orange-500 flex items-center justify-center text-white font-bold shadow-lg">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-red to-red-600 flex items-center justify-center text-white font-bold shadow-lg">
                             JD
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-white">John Doe</p>
-                            <p className="text-xs text-accent">Premium Client</p>
+                            <p className="text-sm font-medium text-foreground">John Doe</p>
+                            <p className="text-xs text-accent-red">Premium Client</p>
                         </div>
                     </div>
                     <Link
@@ -105,11 +105,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     </div>
 
                     <div className="flex items-center space-x-4">
-                        <button className="relative p-2 text-muted hover:text-white rounded-full hover:bg-white/5 transition-colors">
+                        <button className="relative p-2 text-muted hover:text-foreground rounded-full hover:bg-white/5 transition-colors">
                             <Bell size={20} />
-                            <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-accent rounded-full border border-background"></span>
+                            <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-accent-red rounded-full border border-background"></span>
                         </button>
-                        <Link href="/" className="text-sm font-medium px-5 py-2 bg-white/5 hover:bg-white/10 rounded-full text-white transition-colors border border-white/10 hidden sm:block">
+                        <Link href="/" className="text-sm font-medium px-5 py-2 bg-white/5 hover:bg-white/10 rounded-full text-foreground transition-colors border border-white/10 hidden sm:block">
                             Back to Portfolio
                         </Link>
                     </div>

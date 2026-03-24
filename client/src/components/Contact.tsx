@@ -9,6 +9,7 @@ export default function Contact() {
     const [submitted, setSubmitted] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
+        phone: "",
         email: "",
         projectType: "",
         budget: "",
@@ -95,6 +96,18 @@ export default function Contact() {
                                                 suppressHydrationWarning
                                                 className="w-full bg-background rounded-xl px-4 py-4 text-foreground placeholder-muted focus:outline-none focus:ring-1 focus:ring-accent-red transition-all"
                                                 placeholder="e.g. John Doe"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Phone Number</label>
+                                            <input
+                                                type="tel"
+                                                name="phone"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                suppressHydrationWarning
+                                                className="w-full bg-secondary/20 border border-border rounded-xl px-4 py-4 text-foreground placeholder-muted focus:outline-none focus:ring-1 focus:ring-accent-red transition-all"
+                                                placeholder="+250 788 000 000"
                                             />
                                         </div>
                                         <div>
