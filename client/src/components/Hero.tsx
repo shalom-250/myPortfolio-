@@ -1,30 +1,57 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Code2 } from "lucide-react";
 
+const heroImages = [
+    "/images/xg.png",
+    "/images/gh.png",
+    "/images/sa.png",
+    "/images/tkv.png",
+];
+
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+
 export default function Hero() {
+    const t = useTranslations("Hero");
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length);
+        }, 10000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
-            {/* Background Image Overlay */}
+            {/* Cinematic Background Slideshow */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/xg.png"
-                    alt="Hero Background"
-                    fill
-                    className="object-cover object-center opacity-80 dark:opacity-95 transition-opacity duration-1000"
-                    sizes="100vw"
-                    priority
-                />
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={heroImages[currentImage]}
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 1.5, ease: "easeInOut" }}
+                        className="absolute inset-0 w-full h-full"
+                    >
+                        <Image
+                            src={heroImages[currentImage]}
+                            alt="Hero Presentation"
+                            fill
+                            className="object-cover object-top"
+                            sizes="100vw"
+                            priority
+                        />
+                    </motion.div>
+                </AnimatePresence>
             </div>
 
-            {/* Background Gradients */}
-            <div className="absolute inset-0 z-1 opacity-20">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full filter blur-[128px]"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-red/20 rounded-full filter blur-[128px]"></div>
-            </div>
+
 
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <motion.div
@@ -43,9 +70,9 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-5xl md:text-7xl lg:text-8xl font-heading font-extrabold tracking-tight mb-6"
                 >
-                    Full Stack Developer <br />
+                    {t("title1")} <br />
                     <span className="text-muted italic font-light">&</span>{" "}
-                    <span className="text-accent-red">Mobile Specialist</span>
+                    <span className="text-accent-red">{t("title2")}</span>
                 </motion.h1>
 
                 <motion.p
@@ -54,8 +81,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                     className="text-lg md:text-2xl text-muted max-w-3xl mx-auto mb-12 font-light leading-relaxed"
                 >
-                    Building Scalable Systems with Precision & Elegance.
-                    Luxury Web & Mobile Experiences Engineered for Performance.
+                    {t("subtitle")}
                 </motion.p>
 
                 <motion.div
@@ -68,13 +94,13 @@ export default function Hero() {
                         href="#contact"
                         className="w-full sm:w-auto px-8 py-4 bg-accent-red hover:bg-red-600 text-white font-medium rounded-full transition-all shadow-[0_0_20px_rgba(255,49,49,0.4)] hover:shadow-[0_0_35px_rgba(255,49,49,0.6)] flex items-center justify-center transform hover:-translate-y-1"
                     >
-                        Hire Me <ArrowRight size={20} className="ml-2" />
+                        {t("hireMe")} <ArrowRight size={20} className="ml-2" />
                     </Link>
                     <Link
                         href="#projects"
                         className="w-full sm:w-auto px-8 py-4 bg-secondary/80 hover:bg-secondary border border-border/80 text-foreground font-medium rounded-full transition-all flex items-center justify-center backdrop-blur-sm shadow-sm"
                     >
-                        View Projects
+                        {t("viewProjects")}
                     </Link>
                 </motion.div>
             </div>

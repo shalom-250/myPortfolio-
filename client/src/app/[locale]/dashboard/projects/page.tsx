@@ -42,7 +42,6 @@ const projects = [
 ];
 
 export default function DashboardProjects() {
-    const [selectedProject, setSelectedProject] = useState<any>(null);
     const [isNewRequestOpen, setIsNewRequestOpen] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
@@ -181,12 +180,12 @@ export default function DashboardProjects() {
                                 <Clock size={14} className="mr-2" />
                                 Last update 2 hours ago
                             </div>
-                            <button
-                                onClick={() => setSelectedProject(project)}
+                            <Link
+                                href={`/dashboard/projects/${project.id}`}
                                 className="flex items-center text-accent-red font-bold hover:underline"
                             >
                                 View Full Details <ChevronRight size={14} className="ml-1" />
-                            </button>
+                            </Link>
                         </div>
                     </motion.div>
                 ))}
@@ -246,92 +245,6 @@ export default function DashboardProjects() {
                     </div>
                 )}
 
-                {/* Details Modal */}
-                {selectedProject && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center px-6">
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="absolute inset-0 bg-background/80 backdrop-blur-xl"
-                            onClick={() => setSelectedProject(null)}
-                        />
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="bg-secondary border border-white/10 w-full max-w-4xl rounded-3xl p-12 relative z-10 shadow-2xl overflow-y-auto max-h-[90vh]"
-                        >
-                            <button
-                                onClick={() => setSelectedProject(null)}
-                                className="absolute top-8 right-8 p-3 text-muted hover:text-foreground hover:bg-white/5 rounded-full transition-all"
-                            >
-                                <X size={24} />
-                            </button>
-
-                            <div className="flex items-center space-x-6 mb-12">
-                                <div className="w-20 h-20 bg-accent-red/10 rounded-3xl flex items-center justify-center text-accent-red">
-                                    <FileText size={40} />
-                                </div>
-                                <div>
-                                    <h2 className="text-4xl font-heading font-bold mb-2">{selectedProject.name}</h2>
-                                    <p className="text-muted flex items-center">
-                                        <span className="px-3 py-1 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest mr-4">
-                                            {selectedProject.id}
-                                        </span>
-                                        {selectedProject.category}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                                <div className="md:col-span-2 space-y-8">
-                                    <div>
-                                        <h4 className="text-[10px] font-bold uppercase tracking-widest text-accent-red mb-4">Project Overview</h4>
-                                        <p className="text-xl text-foreground/80 leading-relaxed font-medium italic">
-                                            "{selectedProject.details}"
-                                        </p>
-                                    </div>
-                                    <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/5">
-                                        <div>
-                                            <p className="text-[10px] font-bold uppercase tracking-widest text-muted mb-2">Deployment Target</p>
-                                            <p className="font-bold flex items-center">
-                                                <ExternalLink size={16} className="mr-2 text-accent-red" /> production-v1.shalom.dev
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p className="text-[10px] font-bold uppercase tracking-widest text-muted mb-2">Due Date</p>
-                                            <p className="font-bold">{selectedProject.dueDate}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="bg-background/50 border border-white/5 p-8 rounded-3xl h-fit">
-                                    <h4 className="text-[10px] font-bold uppercase tracking-widest text-muted mb-6">Recent Log</h4>
-                                    <div className="space-y-6">
-                                        {[1, 2, 3].map(i => (
-                                            <div key={i} className="flex space-x-3">
-                                                <div className="w-1 h-1 bg-accent-red rounded-full mt-2 shrink-0"></div>
-                                                <p className="text-xs text-muted leading-relaxed">System updated with latest API endpoints for {selectedProject.id}</p>
-                                            </div>
-                                        ))}
-                                    </div>
-                                    <button className="w-full mt-8 py-3 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-bold transition-all border border-white/10">
-                                        View Full Changelog
-                                    </button>
-                                </div>
-                            </div>
-
-                            <div className="flex justify-end space-x-4">
-                                <button className="px-8 py-3 border border-border rounded-xl text-sm font-bold hover:bg-white/5 transition-all">
-                                    Close
-                                </button>
-                                <button className="px-8 py-3 bg-accent-red text-white rounded-xl text-sm font-bold shadow-lg shadow-red-500/20 active:scale-95 transition-all">
-                                    Open in Studio
-                                </button>
-                            </div>
-                        </motion.div>
-                    </div>
-                )}
             </AnimatePresence>
         </div>
     );

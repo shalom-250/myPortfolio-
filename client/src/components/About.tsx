@@ -10,54 +10,58 @@ import {
     SiPostgresql, SiMongodb, SiRedis, SiDocker
 } from "react-icons/si";
 
-const skills = [
-    {
-        category: "Frontend",
-        icon: Layout,
-        items: [
-            { name: "React", icon: SiReact },
-            { name: "Next.js", icon: SiNextdotjs },
-            { name: "Tailwind", icon: SiTailwindcss },
-            { name: "Framer", icon: SiFramer },
-            { name: "Zustand", icon: SiReact } // Fallback to React icon for state
-        ]
-    },
-    {
-        category: "Backend",
-        icon: Server,
-        items: [
-            { name: "Node.js", icon: SiNodedotjs },
-            { name: "NestJS", icon: SiNestjs },
-            { name: "Laravel", icon: SiLaravel },
-            { name: "Python", icon: SiPython },
-            { name: "GraphQL", icon: SiGraphql }
-        ]
-    },
-    {
-        category: "Mobile",
-        icon: Smartphone,
-        items: [
-            { name: "Native", icon: SiReact },
-            { name: "Expo", icon: SiExpo },
-            { name: "Swift", icon: SiSwift },
-            { name: "Kotlin", icon: SiKotlin },
-            { name: "PWA", icon: SiPwa }
-        ]
-    },
-    {
-        category: "DevOps & DB",
-        icon: Database,
-        items: [
-            { name: "PostgreSQL", icon: SiPostgresql },
-            { name: "MongoDB", icon: SiMongodb },
-            { name: "Redis", icon: SiRedis },
-            { name: "Docker", icon: SiDocker },
-            { name: "AWS", icon: FaAws }
-        ]
-    },
-];
+import { useTranslations } from "next-intl";
 
 export default function About() {
+    const t = useTranslations("About");
+
+    const skills = [
+        {
+            category: t("frontend"),
+            icon: Layout,
+            items: [
+                { name: "React", icon: SiReact },
+                { name: "Next.js", icon: SiNextdotjs },
+                { name: "Tailwind", icon: SiTailwindcss },
+                { name: "Framer", icon: SiFramer },
+                { name: "Zustand", icon: SiReact }
+            ]
+        },
+        {
+            category: t("backend"),
+            icon: Server,
+            items: [
+                { name: "Node.js", icon: SiNodedotjs },
+                { name: "NestJS", icon: SiNestjs },
+                { name: "Laravel", icon: SiLaravel },
+                { name: "Python", icon: SiPython },
+                { name: "GraphQL", icon: SiGraphql }
+            ]
+        },
+        {
+            category: t("mobile"),
+            icon: Smartphone,
+            items: [
+                { name: "Native", icon: SiReact },
+                { name: "Expo", icon: SiExpo },
+                { name: "Swift", icon: SiSwift },
+                { name: "Kotlin", icon: SiKotlin },
+                { name: "PWA", icon: SiPwa }
+            ]
+        },
+        {
+            category: t("devops"),
+            icon: Database,
+            items: [
+                { name: "PostgreSQL", icon: SiPostgresql },
+                { name: "MongoDB", icon: SiMongodb },
+                { name: "Redis", icon: SiRedis },
+                { name: "Docker", icon: SiDocker },
+                { name: "AWS", icon: FaAws }
+            ]
+        },
+    ];
+
     return (
         <section id="about" className="py-24 bg-secondary relative">
             <div className="container mx-auto px-6">
@@ -69,11 +73,10 @@ export default function About() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4">
-                        About <span className="text-accent-red">Me</span>
+                        {t("title")} <span className="text-accent-red">{t("me")}</span>
                     </h2>
                     <p className="text-muted max-w-2xl mx-auto text-lg leading-relaxed">
-                        I'm a full-stack developer dedicated to building premium digital experiences.
-                        I bridge the gap between complex engineering and elegant design.
+                        {t("description")}
                     </p>
                 </motion.div>
 

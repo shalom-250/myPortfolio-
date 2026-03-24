@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
     Check, ArrowRight, Sparkles, Rocket, Zap, Shield,
-    Palette, Code, Smartphone, Globe, BarChart, Lock
+    Palette, Code, Smartphone, Globe, BarChart, Lock, Database
 } from "lucide-react";
 
 const services = [
@@ -39,6 +39,22 @@ const services = [
         icon: Globe,
         price: "RFW 1,000,000 / Session",
         features: ["Architecture review", "Performance audit", "Team mentoring", "Tech stack migration"]
+    },
+    {
+        id: "maintenance",
+        title: "Elite System Maintenance",
+        description: "Professional upkeep of existing web and mobile systems. Ensuring your platforms remain fast, secure, and compatible with modern standards.",
+        icon: Shield,
+        price: "From RFW 1,000,000 / mo",
+        features: ["Bug & Stability tracking", "Performance optimization", "Security monitoring", "Infrastructure updates"]
+    },
+    {
+        id: "mentorship",
+        title: "Professional Coding Mentorship",
+        description: "Master the art of engineering with 1-on-1 sessions. Focused on high-level patterns in Backend, Frontend, and Database Design.",
+        icon: Database,
+        price: "Custom Intake",
+        features: ["NestJS & Node.js Mastery", "Next.js & React Expert", "Database modeling (Postgres/Prisma)", "Professional Git workflows"]
     }
 ];
 

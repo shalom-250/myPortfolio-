@@ -4,7 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle2, ChevronRight, ChevronLeft } from "lucide-react";
 
+import { useTranslations } from "next-intl";
+
 export default function Contact() {
+    const t = useTranslations("Contact");
     const [step, setStep] = useState(1);
     const [submitted, setSubmitted] = useState(false);
     const [formData, setFormData] = useState({
@@ -12,7 +15,7 @@ export default function Contact() {
         phone: "",
         email: "",
         projectType: "",
-        budget: "",
+        scopeType: "",
         timeline: "",
         details: "",
         srsDocument: null as File | null,
@@ -44,11 +47,10 @@ export default function Contact() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-6xl font-heading font-extrabold mb-6">
-                        Start a <span className="text-accent-red">Project</span>
+                        {t("title")} <span className="text-accent-red">{t("project")}</span>
                     </h2>
                     <p className="text-muted text-lg max-w-2xl mx-auto">
-                        Ready to bring your vision to life? Fill out the form below to request a quote
-                        or schedule a consultation.
+                        {t("description")}
                     </p>
                 </motion.div>
 
@@ -57,9 +59,9 @@ export default function Contact() {
                     {!submitted && (
                         <div className="mb-12">
                             <div className="flex justify-between mb-4">
-                                <span className={`text-xs md:text-sm font-medium ${step >= 1 ? "text-accent-red" : "text-muted"}`}>Personal Info</span>
-                                <span className={`text-xs md:text-sm font-medium ${step >= 2 ? "text-accent-red" : "text-muted"}`}>Project Scope</span>
-                                <span className={`text-xs md:text-sm font-medium ${step >= 3 ? "text-accent-red" : "text-muted"}`}>Details</span>
+                                <span className={`text-xs md:text-sm font-medium ${step >= 1 ? "text-accent-red" : "text-muted"}`}>{t("personalInfo")}</span>
+                                <span className={`text-xs md:text-sm font-medium ${step >= 2 ? "text-accent-red" : "text-muted"}`}>{t("projectScope")}</span>
+                                <span className={`text-xs md:text-sm font-medium ${step >= 3 ? "text-accent-red" : "text-muted"}`}>{t("details")}</span>
                             </div>
                             <div className="h-1 bg-white/10 rounded-full overflow-hidden">
                                 <motion.div
@@ -86,7 +88,7 @@ export default function Contact() {
                                 {step === 1 && (
                                     <div className="space-y-6">
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Full Name</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("fullName")}</label>
                                             <input
                                                 type="text"
                                                 name="name"
@@ -99,7 +101,7 @@ export default function Contact() {
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Phone Number</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("phoneNumber")}</label>
                                             <input
                                                 type="tel"
                                                 name="phone"
@@ -111,7 +113,7 @@ export default function Contact() {
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Email Address</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("email")}</label>
                                             <input
                                                 type="email"
                                                 name="email"
@@ -129,7 +131,7 @@ export default function Contact() {
                                 {step === 2 && (
                                     <div className="space-y-6">
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Project Type</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("projectType")}</label>
                                             <select
                                                 name="projectType"
                                                 required
@@ -142,24 +144,26 @@ export default function Contact() {
                                                 <option value="web" className="bg-background dark:bg-secondary">Luxury Web Design</option>
                                                 <option value="platform" className="bg-background dark:bg-secondary">Full Stack Platform</option>
                                                 <option value="mobile" className="bg-background dark:bg-secondary">Mobile App Development</option>
+                                                <option value="maintenance" className="bg-background dark:bg-secondary">Elite System Maintenance</option>
+                                                <option value="mentorship" className="bg-background dark:bg-secondary">Professional Mentorship</option>
                                                 <option value="other" className="bg-background dark:bg-secondary">Other / Consulting</option>
                                             </select>
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Estimated Budget</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("objective")}</label>
                                             <select
-                                                name="budget"
+                                                name="scopeType"
                                                 required
-                                                value={formData.budget}
+                                                value={formData.scopeType}
                                                 onChange={handleChange}
                                                 suppressHydrationWarning
                                                 className="w-full bg-secondary/20 border border-border rounded-xl px-4 py-4 text-foreground focus:outline-none focus:ring-1 focus:ring-accent-red transition-all appearance-none"
                                             >
-                                                <option value="" className="bg-background dark:bg-secondary">Select budget range</option>
-                                                <option value="<5M" className="bg-background dark:bg-secondary">Under RFW 5,000,000</option>
-                                                <option value="5M-10M" className="bg-background dark:bg-secondary">RFW 5,000,000 - RFW 10,000,000</option>
-                                                <option value="10M-25M" className="bg-background dark:bg-secondary">RFW 10,000,000 - RFW 25,000,000</option>
-                                                <option value=">25M" className="bg-background dark:bg-secondary">RFW 25,000,000+</option>
+                                                <option value="" className="bg-background dark:bg-secondary">Select primary goal</option>
+                                                <option value="branding" className="bg-background dark:bg-secondary">Elite Brand Identity & Digital Presence</option>
+                                                <option value="mvp" className="bg-background dark:bg-secondary">Scalable MVP / Market Entry</option>
+                                                <option value="expansion" className="bg-background dark:bg-secondary">Business Expansion & Automation</option>
+                                                <option value="revamp" className="bg-background dark:bg-secondary">System Overhaul & Performance Optimization</option>
                                             </select>
                                         </div>
                                     </div>
@@ -168,7 +172,7 @@ export default function Contact() {
                                 {step === 3 && (
                                     <div className="space-y-6">
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Project Details</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("projectDetails")}</label>
                                             <textarea
                                                 name="details"
                                                 required
@@ -181,7 +185,7 @@ export default function Contact() {
                                             ></textarea>
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">SRS Document (Optional)</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("srs")}</label>
                                             <div className="relative group/file">
                                                 <input
                                                     type="file"
@@ -205,7 +209,7 @@ export default function Contact() {
                                             </div>
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-foreground/80 mb-2">Desired Timeline (Optional)</label>
+                                            <label className="block text-sm font-medium text-foreground/80 mb-2">{t("timeline")}</label>
                                             <input
                                                 type="text"
                                                 name="timeline"
@@ -227,7 +231,7 @@ export default function Contact() {
                                             suppressHydrationWarning
                                             className="px-6 py-3 bg-secondary text-foreground rounded-xl transition-all flex items-center font-medium"
                                         >
-                                            <ChevronLeft size={18} className="mr-2" /> Back
+                                            <ChevronLeft size={18} className="mr-2" /> {t("back")}
                                         </button>
                                     ) : <div></div>}
 
@@ -238,7 +242,7 @@ export default function Contact() {
                                             suppressHydrationWarning
                                             className="px-6 py-3 bg-accent-red hover:bg-red-600 text-white rounded-xl shadow-[0_0_15px_rgba(255,49,49,0.3)] transition-all flex items-center font-medium"
                                         >
-                                            Continue <ChevronRight size={18} className="ml-2" />
+                                            {t("continue")} <ChevronRight size={18} className="ml-2" />
                                         </button>
                                     ) : (
                                         <button
@@ -246,7 +250,7 @@ export default function Contact() {
                                             suppressHydrationWarning
                                             className="px-8 py-3 bg-accent-red hover:bg-red-600 text-white rounded-xl shadow-[0_0_15px_rgba(255,49,49,0.3)] transition-all flex items-center font-medium"
                                         >
-                                            Submit Request <Send size={18} className="ml-2" />
+                                            {t("submit")} <Send size={18} className="ml-2" />
                                         </button>
                                     )}
                                 </div>
@@ -261,15 +265,15 @@ export default function Contact() {
                                 <div className="w-20 h-20 bg-accent-red/20 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <CheckCircle2 size={40} className="text-accent-red" />
                                 </div>
-                                <h3 className="text-3xl font-bold font-heading text-foreground mb-4">Request Received</h3>
+                                <h3 className="text-3xl font-bold font-heading text-foreground mb-4">{t("successTitle")}</h3>
                                 <p className="text-muted mb-8 max-w-md mx-auto">
-                                    Thank you for reaching out, {formData.name || "friend"}. I've received your project details and will be in touch within 24 hours to discuss the next steps.
+                                    {t("successMessage")}
                                 </p>
                                 <button
                                     onClick={() => { setSubmitted(false); setStep(1); }}
                                     className="px-8 py-3 bg-secondary hover:bg-secondary/80 border border-border text-foreground rounded-xl font-medium transition-all"
                                 >
-                                    Send Another Request
+                                    {t("sendAnother")}
                                 </button>
                             </motion.div>
                         )}

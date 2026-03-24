@@ -1,0 +1,189 @@
+{
+  "Navbar": {
+    "home": "Nyumbani",
+    "projects": "Miradi",
+    "services": "Huduma",
+    "blog": "Blogu",
+    "about": "Kuhusu",
+    "portal": "Tovuti",
+    "hireMe": "Niajiri",
+    "themeMode": "Hali ya Mandhari",
+    "clientPortal": "Tovuti ya Mteja",
+    "language": "Lugha"
+  },
+  "Hero": {
+    "title1": "Msanidi Programu wa Full Stack",
+    "title2": "Mtaalamu wa Simu",
+    "subtitle": "Kujenga Mifumo Inayoweza Kukua kwa Usahihi na Umaridadi. Uzoefu wa Tovuti za Kifahari na Simu Zilizoundwa kwa ajili ya Utendaji.",
+    "hireMe": "Niajiri",
+    "viewProjects": "Angalia Miradi"
+  },
+  "About": {
+    "title": "Kuhusu",
+    "me": "Mimi",
+    "description": "Mimi ni msanidi programu wa full-stack aliyejitolea kuunda uzoefu wa kidijitali wa kiwango cha juu. Naunganisha pengo kati ya uhandisi mgumu na muundo maridadi.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Simu",
+    "devops": "DevOps & DB"
+  },
+  "Services": {
+    "title": "Huduma",
+    "elite": "Elite",
+    "description": "Suluhisho kamili zinazolingana na wateja wa hali ya juu. Kutoka kwa kurasa za kifahari hadi majukwaa ya kiwango cha biashara.",
+    "popular": "Maarufu Zaidi",
+    "learnMore": "Jifunze Zaidi",
+    "requestQuote": "Omba Nukuu",
+    "exploreAll": "Gundua Huduma Zote",
+    "luxuryWeb": {
+        "title": "Muundo wa Tovuti wa Kifahari",
+        "price": "Kuanzia RFW 2,499,000",
+        "description": "Uzoefu bora wa kidijitali ulioundwa kwa bidhaa za hali ya juu.",
+        "features": ["Ubunifu wa UI/UX Maalum", "Michoro ya Framer Motion", "Kuboresha SEO", "PWA Inayoitikia", "Ujumuishaji wa CMS"]
+    },
+    "fullStack": {
+        "title": "Jukwaa la Full Stack",
+        "price": "Kuanzia RFW 5,999,000",
+        "description": "Mifumo kamili ya kidijitali iliyoundwa kwa ajili ya upanuzi.",
+        "features": ["Kila kitu katika Ubunifu wa Wavuti", "Ubunifu wa Backend Maalum", "Mkakati wa Hifadhidata", "Uthibitishaji na Usalama", "Ujumuishaji wa Njia ya Malipo"]
+    },
+    "mobileApps": {
+        "title": "Uendelezaji wa Programu za Simu",
+        "price": "Kuanzia RFW 4,999,000",
+        "description": "Programu za simu za asili na za majukwaa mengi zenye utendaji wa juu.",
+        "features": ["React Native / Expo", "Uwekaji kwenye App Store", "Arifa za Push", "Sawazisha Nje ya Mtandao", "Sifa za Wakati Halisi"]
+    },
+    "maintenance": {
+        "title": "Matengenezo ya Mfumo ya Elite",
+        "price": "Kuanzia RFW 999,000 / mwezi",
+        "description": "Uboreshaji endelevu na ufuatiliaji makini.",
+        "features": ["Marekebisho ya Hitilafu na Utulivu", "Uboreshaji wa Utendaji", "Ukaguzi wa Usalama", "Usanidi wa Hifadhidata", "Usimamizi wa Miundombinu"]
+    },
+    "mentorship": {
+        "title": "Ushauri wa Kitaalamu wa Coding",
+        "price": "Vikao Maalum",
+        "description": "Haraka kazi yako kwa mwongozo wa kitaalamu wa ana kwa ana.",
+        "features": ["Node.js / NestJS ya Hali ya Juu", "React / Next.js Ustadi", "Ubunifu wa Usanifu wa Mfumo", "Uundaji wa Hifadhidata", "Mchakato wa Kazi wa Kitaalamu (Git/CI/CD)"]
+    }
+  },
+  "Projects": {
+    "title": "Kazi",
+    "selected": "Zilizoteuliwa",
+    "description": "Mkusanyiko wa uzoefu wa kidijitali niliounda. Kutafsiri matatizo magumu kuwa suluhisho maridadi na zinazoweza kukua.",
+    "all": "Zote",
+    "webApps": "Programu za Wavuti",
+    "mobileApps": "Programu za Simu",
+    "systems": "Mifumo",
+    "viewAll": "Angalia Miradi Yote",
+    "items": {
+      "aura": {
+        "title": "Jukwaa la E-Commerce la Aura",
+        "description": "Jukwaa la kifahari la e-commerce kwa mavazi lenye hesabu ya wakati halisi na uzoefu wa kisasa wa kulipia.",
+        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+      },
+      "vanguard": {
+        "title": "App ya Fitness ya Vanguard",
+        "description": "Programu ya simu ya majukwaa mengi kwa ajili ya kufuatilia mazoezi ya kibinafsi na uchanganuzi.",
+        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+      },
+      "nimbus": {
+        "title": "Nimbus Cloud ERP",
+        "description": "Mfumo wa kupanga rasilimali za biashara wenye muundo wa moduli na upatikanaji kulingana na majukumu.",
+        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+      },
+      "luxe": {
+        "title": "Luxe Real Estate",
+        "description": "Jukwaa la hali ya juu la orodha ya mali isiyohamishika lenye ramani zinazoingiliana na mageuzi ya michoro.",
+        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Ushuhuda",
+    "client": "wa Wateja",
+    "description": "Sikia kutoka kwa wabunifu na viongozi niliopata upendeleo wa kushirikiana nao.",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "Mkurugenzi Mtendaji, TechFlow",
+        "content": "Kufanya kazi na Shalom kulibadilisha mchezo kwa jukwaa letu. Uangalifu kwa undani na ubora wa uhandisi hauna mfano."
+      },
+      "david": {
+        "name": "David Chen",
+        "role": "Mwanzilishi, Zenith AI",
+        "content": "Urembo wa kifahari waliouleta kwenye uwepo wetu wa wavuti uliongeza kiwango chetu cha ubadilishaji mara moja. Kweli msanidi programu wa kiwango cha juu."
+      },
+      "aisha": {
+        "name": "Aisha Kamali",
+        "role": "Meneja wa Bidhaa, Nile Pay",
+        "content": "Mtaalamu sana na aliwasilisha jukwaa tata la fintech kabla ya ratiba. Ubora wa kodi ni wa kipekee."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Anza",
+    "project": "Mradi",
+    "description": "Uko tayari kufanikisha maono yako? Jaza fomu hapa chini ili kuomba nukuu au kupanga mashauriano.",
+    "personalInfo": "Maelezo ya Kibinafsi",
+    "projectScope": "Mtazamo wa Mradi",
+    "details": "Maelezo",
+    "fullName": "Majina Kamili",
+    "phoneNumber": "Nambari ya Simu",
+    "email": "Barua Pepe",
+    "projectType": "Aina ya Mradi",
+    "objective": "Lengo Kuu la Mradi",
+    "projectDetails": "Maelezo ya Mradi",
+    "srs": "Hati ya SRS (Hiari)",
+    "timeline": "Muda Unaotaka (Hiari)",
+    "back": "Rudi",
+    "continue": "Endelea",
+    "submit": "Tuma Ombi",
+    "successTitle": "Ombi Limepokelewa",
+    "successMessage": "Asante kwa kuwasiliana nasi. Nimepokea maelezo ya mradi wako na nitakuwasiliana ndani ya saa 24 ili kujadili hatua zinazofuata.",
+    "sendAnother": "Tuma Ombi Lingine"
+  },
+  "Footer": {
+    "quickLinks": "Viungo vya Haraka",
+    "connect": "Ungana",
+    "description": "Kujenga Mifumo Inayoweza Kukua kwa Usahihi na Umaridadi. Uzoefu wa Tovuti za Kifahari na Simu Zilizoundwa kwa ajili ya Utendaji.",
+    "allRights": "Haki zote zimehifadhiwa.",
+    "privacy": "Sera ya Faragha",
+    "terms": "Vigezo na Masharti"
+  },
+  "DashboardLayout": {
+    "dashboard": "Dashibodi",
+    "nav": {
+      "overview": "Maelezo ya Jumla",
+      "projects": "Miradi",
+      "analytics": "Uchambuzi",
+      "messages": "Ujumbe",
+      "settings": "Mipangilio"
+    },
+    "notifTitle": "Arifa",
+    "readAll": "Soma Vyote",
+    "clearAll": "Futa Vyote",
+    "viewAll": "Tazama Vyote",
+    "backToPortfolio": "Rudi kwenye Portfolio",
+    "premiumClient": "Mteja wa Premium",
+    "signOut": "Ondoka",
+    "notif": {
+      "milestone": { "title": "Hatua Imekamilika", "msg": "Ubunifu wa ukurasa wa nyumbani umeidhinishwa." },
+      "message": { "title": "Ujumbe Mpya", "msg": "Shalom amekutumia sasisho la mradi." },
+      "invoice": { "title": "Ankara Imelipwa", "msg": "Malipo ya Awamu ya 1 yamepokelewa." }
+    }
+  },
+  "DashboardOverview": {
+    "welcome": "Karibu tena",
+    "subtitle": "Hapa ndivyo vinavyoendelea na miradi yako leo.",
+    "stats": {
+      "activeProjects": "Miradi Inayoendelea",
+      "pendingTasks": "Majukumu Yanayosubiri",
+      "completedMilestones": "Hatua Zilizokamilika",
+      "allTime": "Wakati wote"
+    },
+    "viewDetails": "Tazama Maelezo",
+    "recentActivity": "Shughuli za Hivi Karibuni",
+    "activityDetail": "Maelezo ya Shughuli",
+    "viewProject": "Tazama Mradi Kamili"
+  }
+}

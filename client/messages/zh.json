@@ -1,0 +1,189 @@
+{
+  "Navbar": {
+    "home": "首页",
+    "projects": "项目",
+    "services": "服务",
+    "blog": "博客",
+    "about": "关于",
+    "portal": "门户",
+    "hireMe": "雇佣我",
+    "themeMode": "主题模式",
+    "clientPortal": "客户门户",
+    "language": "语言"
+  },
+  "Hero": {
+    "title1": "全栈开发人员",
+    "title2": "移动专家",
+    "subtitle": "以精准和优雅构建可扩展的系统。为高性能而设计的豪华网页和移动体验。",
+    "hireMe": "雇佣我",
+    "viewProjects": "查看项目"
+  },
+  "About": {
+    "title": "关于",
+    "me": "我",
+    "description": "我是一名致力于构建优质数字体验的全栈开发人员。我填补了复杂工程与优雅设计之间的空白。",
+    "frontend": "前端",
+    "backend": "后端",
+    "mobile": "移动端",
+    "devops": "运维与数据库"
+  },
+  "Services": {
+    "title": "服务",
+    "elite": "精英",
+    "description": "为高端客户量身定制的全面解决方案。从豪华着陆页到企业级平台。",
+    "popular": "最受欢迎",
+    "learnMore": "了解更多",
+    "requestQuote": "索取报价",
+    "exploreAll": "探索所有服务",
+    "luxuryWeb": {
+        "title": "豪华网页设计",
+        "price": "起价 RFW 2,499,000",
+        "description": "为顶级品牌打造的精美数字体验。",
+        "features": ["自定义 UI/UX 设计", "Framer Motion 动画", "SEO 优化", "响应式 PWA", "CMS 集成"]
+    },
+    "fullStack": {
+        "title": "全栈平台",
+        "price": "起价 RFW 5,999,000",
+        "description": "为可扩展性而构建的综合数字生态系统。",
+        "features": ["网页设计中的所有内容", "自定义后端架构", "数据库策略", "身份验证与安全", "支付网关集成"]
+    },
+    "mobileApps": {
+        "title": "移动应用开发",
+        "price": "起价 RFW 4,999,000",
+        "description": "高性能的原生和跨平台移动应用。",
+        "features": ["React Native / Expo", "App Store 部署", "推送通知", "离线同步", "实时功能"]
+    },
+    "maintenance": {
+        "title": "精英系统维护",
+        "price": "起价 RFW 999,000 / 月",
+        "description": "持续优化和主动监控。",
+        "features": ["错误修复与稳定性", "性能优化", "安全审核", "数据库调优", "基础设施管理"]
+    },
+    "mentorship": {
+        "title": "专业编程指导",
+        "price": "定制课程",
+        "description": "通过一对一的专家指导加速您的职业生涯。",
+        "features": ["高级 Node.js / NestJS", "精通 React / Next.js", "系统架构设计", "数据库建模", "专业工作流 (Git/CI/CD)"]
+    }
+  },
+  "Projects": {
+    "title": "作品",
+    "selected": "精选",
+    "description": "我策划的一系列数字体验作品。将复杂问题转化为优雅、可扩展的解决方案。",
+    "all": "全部",
+    "webApps": "网页应用",
+    "mobileApps": "移动应用",
+    "systems": "系统架构",
+    "viewAll": "查看所有项目",
+    "items": {
+      "aura": {
+        "title": "Aura 电子商务平台",
+        "description": "具有实时库存和现代结账体验的豪华时尚电子商务平台。",
+        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+      },
+      "vanguard": {
+        "title": "Vanguard 健身应用",
+        "description": "用于个性化锻炼跟踪和分析的跨平台移动应用。",
+        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+      },
+      "nimbus": {
+        "title": "Nimbus 云 ERP",
+        "description": "具有模块化架构和基于角色的访问的企业资源计划系统。",
+        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+      },
+      "luxe": {
+        "title": "Luxe 房地产",
+        "description": "具有交互式地图和动画过渡的高端房地产列表平台。",
+        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "客户",
+    "client": "评价",
+    "description": "听听我有幸合作过的创新者和领导者的评价。",
+    "items": {
+      "sarah": {
+        "name": "莎拉·约翰逊",
+        "role": "TechFlow 首席执行官",
+        "content": "与 Shalom 合作彻底改变了我们的平台。对细节的关注和卓越的工程设计是无与伦比的。"
+      },
+      "david": {
+        "name": "大卫·陈",
+        "role": "Zenith AI 创始人",
+        "content": "他们为我们的网络形象带来的奢华审美立即提高了我们的转化率。真正的高端开发人员。"
+      },
+      "aisha": {
+        "name": "阿伊莎·卡马利",
+        "role": "Nile Pay 产品经理",
+        "content": "非常专业，并提前交付了一个复杂的金融科技平台。代码质量非常出色。"
+      }
+    }
+  },
+  "Contact": {
+    "title": "启动",
+    "project": "项目",
+    "description": "准备好将您的愿景变为现实了吗？填写下面的表格以索取报价或安排咨询。",
+    "personalInfo": "个人信息",
+    "projectScope": "项目范围",
+    "details": "详细信息",
+    "fullName": "全名",
+    "phoneNumber": "电话号码",
+    "email": "电子邮件地址",
+    "projectType": "项目类型",
+    "objective": "主要项目目标",
+    "projectDetails": "项目详情",
+    "srs": "SRS 文档（可选）",
+    "timeline": "期望时间表（可选）",
+    "back": "返回",
+    "continue": "继续",
+    "submit": "提交申请",
+    "successTitle": "申请已收到",
+    "successMessage": "感谢您的联系。我已收到您的项目详情，并将在 24 小时内与您联系，讨论后续步骤。",
+    "sendAnother": "发送另一个申请"
+  },
+  "Footer": {
+    "quickLinks": "快速链接",
+    "connect": "联系方式",
+    "description": "以精准和优雅构建可扩展的系统。为高性能而设计的豪华网页和移动体验。",
+    "allRights": "版权所有。",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "DashboardLayout": {
+    "dashboard": "仪表板",
+    "nav": {
+      "overview": "概览",
+      "projects": "项目",
+      "analytics": "分析",
+      "messages": "消息",
+      "settings": "设置"
+    },
+    "notifTitle": "通知",
+    "readAll": "全部标记为已读",
+    "clearAll": "清除全部",
+    "viewAll": "查看全部",
+    "backToPortfolio": "返回作品集",
+    "premiumClient": "高级客户",
+    "signOut": "退出登录",
+    "notif": {
+      "milestone": { "title": "里程碑已完成", "msg": "首页设计已通过审核。" },
+      "message": { "title": "新消息", "msg": "Shalom 向您发送了项目更新。" },
+      "invoice": { "title": "发票已支付", "msg": "已收到第一阶段的付款。" }
+    }
+  },
+  "DashboardOverview": {
+    "welcome": "欢迎回来",
+    "subtitle": "这是您今天项目的进展情况。",
+    "stats": {
+      "activeProjects": "进行中的项目",
+      "pendingTasks": "待处理任务",
+      "completedMilestones": "已完成的里程碑",
+      "allTime": "总计"
+    },
+    "viewDetails": "查看详情",
+    "recentActivity": "最近活动",
+    "activityDetail": "活动详情",
+    "viewProject": "查看完整项目"
+  }
+}

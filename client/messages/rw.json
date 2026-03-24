@@ -1,0 +1,189 @@
+{
+  "Navbar": {
+    "home": "Ahabanza",
+    "projects": "Imishinga",
+    "services": "Serivisi",
+    "blog": "Amakuru",
+    "about": "Ibyerekeye",
+    "portal": "Iwinjiriro",
+    "hireMe": "Mpuza Akazi",
+    "themeMode": "Uburyo bugaragara",
+    "clientPortal": "Iwinjiriro ry'Abakiriya",
+    "language": "Ururimi"
+  },
+  "Hero": {
+    "title1": "Uwubatsi wagutse wa",
+    "title2": "Umuhanga muri Mobile",
+    "subtitle": "Wubaka Sisitemu zihamye kandi nziza bihebuje. Inararibonye mu mbuga za lukisire na porogaramu za ngendanwa zikozwe neza.",
+    "hireMe": "Mpuza Akazi",
+    "viewProjects": "Reba Imishinga"
+  },
+  "About": {
+    "title": "Ibyerekeye",
+    "me": "Njyewe",
+    "description": "Ndi uwubatsi wagutse (Full-stack developer) wiyemeje kubaka inararibonye z'ikoranabuhanga zidasanzwe. mpura ubumenyi bw'ubwubatsi bukomeye na twebwe nziza.",
+    "frontend": "Imbere",
+    "backend": "Inyuma",
+    "mobile": "Ngendanwa",
+    "devops": "DevOps & DB"
+  },
+  "Services": {
+    "title": "Serivisi",
+    "elite": "Zidasanzwe",
+    "description": "Ibisubizo byuzuye bikunze abakiriya b'icyubahiro. Kuva ku mbuga nziza cyane kugeza kuri sisitemu z'ibigo binini.",
+    "popular": "Ikunzwe cyane",
+    "learnMore": "Menya byinshi",
+    "requestQuote": "Saba Igiciro",
+    "exploreAll": "Reba Serivisi Zose",
+    "luxuryWeb": {
+        "title": "Gukora Imbuga za Lukisire",
+        "price": "Kuva kuri RFW 2,499,000",
+        "description": "Inararibonye z'ikoranabuhanga ziteguye neza ku bigo bikomeye.",
+        "features": ["Guhimba UI/UX k'umwihariko", "Gukoresha Animasiyo za Framer Motion", "Guteza imbere SEO", "Gukora PWA yihuta", "Guhuza na CMS"]
+    },
+    "fullStack": {
+        "title": "Sisitemu Wagutse",
+        "price": "Kuva kuri RFW 5,999,000",
+        "description": "Ibiranga sisitemu z'ikoranabuhanga zikoze neza kugira ngo zaguke.",
+        "features": ["Ibyerekeye imbuga byose", "Ubwubatsi bw'inyuma k'umwihariko", "Gupanga imiterere y'ububiko", "Umutekano n'Iwinjiriro", "Guhuza n'uburyo bwo kwishyura"]
+    },
+    "mobileApps": {
+        "title": "Gukora Porogaramu za Ngendanwa",
+        "price": "Kuva kuri RFW 4,999,000",
+        "description": "Porogaramu za ngendanwa zifite imikorere yo hejuru.",
+        "features": ["React Native / Expo", "Gushyira kuri App Store", "Ibutsa (Push Notifications)", "Gukora adafite interineti", "Ibiranga imikorere y'ako kanya"]
+    },
+    "maintenance": {
+        "title": "Gufata neza Sisitemu",
+        "price": "Kuva kuri RFW 999,000 / ukwezi",
+        "description": "Gukomeza gukurikirana no kunoza imikorere buri gihe.",
+        "features": ["Gukosora utubazo", "Kuzamura imikorere", "Igenzura ry'umutekano", "Gutunganya ububiko", "Gucunga ibikorwaremezo"]
+    },
+    "mentorship": {
+        "title": "Kwigisha Porogaramu",
+        "price": "Gahunda y'Umwihariko",
+        "description": "Vugutira akazi kawe umurego mufashijwe n'inzobere.",
+        "features": ["Node.js / NestJS yisumbuye", "React / Next.js k'ubuhanga", "Guhimba ubwubatsi bwa Sisitemu", "Gukora imiterere y'ububiko", "Uburyo bw'akazi k'umwuga (Git/CI/CD)"]
+    }
+  },
+  "Projects": {
+    "title": "Imirimo",
+    "selected": "Yatoranyijwe",
+    "description": "Ikusanyirizo ry'inararibonye z'ikoranabuhanga nubatse. Gukemura ibibazo bikomeye mu buryo bwiza kandi bwaguka.",
+    "all": "Byose",
+    "webApps": "Mbuga",
+    "mobileApps": "Ngendanwa",
+    "systems": "Sisitemu",
+    "viewAll": "Reba Imishinga Yose",
+    "items": {
+      "aura": {
+        "title": "Aura E-Commerce Platform",
+        "description": "Urubuga rwa lukisire rucururizwaho imyambaro rufite ibikoresho by'ako kanya n'uburyo bugezweho bwo kwishyura.",
+        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+      },
+      "vanguard": {
+        "title": "Vanguard Fitness App",
+        "description": "Porogaramu ya ngendanwa ifasha mu gukurikirana imyitozo ngororangingo k'umuntu ku giti cye.",
+        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+      },
+      "nimbus": {
+        "title": "Nimbus Cloud ERP",
+        "description": "Sisitemu yo gucunga ibikoresho by'ikigo ifite ubwubatsi bw'imigabane n'uburyo bwo kugenzura uwinjira.",
+        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+      },
+      "luxe": {
+        "title": "Luxe Real Estate",
+        "description": "Urubuga ruhuza abagura n'abagurisha amazu rufite amakarita n'izindi miterere ishimishije.",
+        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Ubuhamya",
+    "client": "bw'Abakiriya",
+    "description": "Umva ibyo abatanga udushya n'abayobozi nishimiye gukorana nabo bavuga.",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechFlow",
+        "content": "Gukorana na Shalom byahinduye byinshi kuri paji yacu. Kwita ku bintu byose n'ubuhanga mu bwubatsi bwa software ni ntagereranywa."
+      },
+      "david": {
+        "name": "David Chen",
+        "role": "Uwatanze igitekerezo, Zenith AI",
+        "content": "Ubwiza buhanitse bazanye ku mbuga zacu bwahise bwongera imibare y'abakiriya badusura. Mu by'ukuri ni umwubatsi w'imbuga uri ku rwego rwo hejuru."
+      },
+      "aisha": {
+        "name": "Aisha Kamali",
+        "role": "Umuyobozi w'Ibicuruzwa, Nile Pay",
+        "content": "Ni umunyamwuga cyane kandi yatanze paji ya fintech igoye mbere y'igihe cyari giteganyijwe. Ubuziranenge bwa kodi ye ni bwiza cyane."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Tangira",
+    "project": "Umushinga",
+    "description": "Witeguye gushyira mu mubiri iyerekwa ryawe? Cyuza Ifishi ikurikira hano usabe igiciro cyangwa gahunda yo kugisha inama.",
+    "personalInfo": "Amakuru yawe",
+    "projectScope": "Imiterere y'Umushinga",
+    "details": "Ibisobanuro",
+    "fullName": "Amazina yose",
+    "phoneNumber": "Nimero ya Terefoni",
+    "email": "Imeyili",
+    "projectType": "Ubwoko bw'Umushinga",
+    "objective": "Intego y'ibanze y'umushinga",
+    "projectDetails": "Ibisobanuro by'Umushinga",
+    "srs": "Idosiye ya SRS (Ntabwo ari itegeko)",
+    "timeline": "Igihe wifuza (Ntabwo ari itegeko)",
+    "back": "Subira inyuma",
+    "continue": "Komeza",
+    "submit": "Ohereza Ibusabe",
+    "successTitle": "Ibusabe bwakiriwe",
+    "successMessage": "Murakoze kutuvugisha. Twakiriye ibisobanuro by'umushinga wanyu kandi tuzabavugisha mu masaha 24 kugira ngo tuganire ku ntabwe zikurikira.",
+    "sendAnother": "Ohereza ubundi busabe"
+  },
+  "Footer": {
+    "quickLinks": "Lye vuba",
+    "connect": "Twandikire",
+    "description": "Wubaka Sisitemu zihamye kandi nziza bihebuje. Inararibonye mu mbuga za lukisire na porogaramu za ngendanwa zikozwe neza.",
+    "allRights": "Uburenganzira bwose bwariwe.",
+    "privacy": "Amategeko y'ibanga",
+    "terms": "Amategeko n'amabwiriza"
+  },
+  "DashboardLayout": {
+    "dashboard": "Iwinjiriro",
+    "nav": {
+      "overview": "Incamake",
+      "projects": "Imishinga",
+      "analytics": "Igereranya",
+      "messages": "Ubutumwa",
+      "settings": "Igenamiterere"
+    },
+    "notifTitle": "Imenyesha",
+    "readAll": "Soma byose",
+    "clearAll": "Siba byose",
+    "viewAll": "Reba byose",
+    "backToPortfolio": "Subira Ahabanza",
+    "premiumClient": "Umukiriya w'Icyubahiro",
+    "signOut": "Sohoka",
+    "notif": {
+      "milestone": { "title": "Intambwe yashojwe", "msg": "Igishushanyo cy'ahabanza cyaremejwe." },
+      "message": { "title": "Ubutumwa bushya", "msg": "Shalom yaguhaye amakuru mashya y'umushinga." },
+      "invoice": { "title": "Inyemezabwishyu", "msg": "Ubwishyu bw'icyiciro cya mbere bwakiriwe." }
+    }
+  },
+  "DashboardOverview": {
+    "welcome": "Murakaza neza",
+    "subtitle": "Ibi nibyo biri kubera ku mishinga yawe uyu munsi.",
+    "stats": {
+      "activeProjects": "Imishinga Ikora",
+      "pendingTasks": "Imirimo itegereje",
+      "completedMilestones": "Ibikorwa byashojwe",
+      "allTime": "Igihe cyose"
+    },
+    "viewDetails": "Reba mu buryo bwimbitse",
+    "recentActivity": "Iheruka gukorwa",
+    "activityDetail": "Ibisobanuro by'igikorwa",
+    "viewProject": "Reba Umushinga wose"
+  }
+}

@@ -1,55 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Check, ArrowRight, Sparkles, Rocket, Zap, Shield } from "lucide-react";
 
-const services = [
-    {
-        id: "luxury-web",
-        title: "Luxury Web Design",
-        price: "From RFW 2,499,000",
-        description: "Premium, high-performance websites with stunning visuals and micro-interactions.",
-        features: [
-            "Custom UI/UX Design",
-            "Framer Motion Animations",
-            "SEO Optimization",
-            "Responsive PWA",
-            "CMS Integration"
-        ],
-        popular: false,
-    },
-    {
-        id: "full-stack",
-        title: "Full Stack Platform",
-        price: "From RFW 5,999,000",
-        description: "Scalable web applications with complex backends, databases, and APIs.",
-        features: [
-            "Everything in Web Design",
-            "Custom Backend Architecture",
-            "Database Strategy",
-            "Authentication & Security",
-            "Payment Gateway Integration"
-        ],
-        popular: true,
-    },
-    {
-        id: "mobile-apps",
-        title: "Mobile App Development",
-        price: "From RFW 4,999,000",
-        description: "Cross-platform mobile applications for iOS and Android with native performance.",
-        features: [
-            "React Native / Expo",
-            "App Store Deployment",
-            "Push Notifications",
-            "Offline Sync",
-            "Real-time Features"
-        ],
-        popular: false,
-    }
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function Services() {
+    const t = useTranslations("Services");
+
+    const serviceIds = ["luxuryWeb", "fullStack", "mobileApps", "maintenance", "mentorship"];
+    
+    const services = serviceIds.map(id => ({
+        id,
+        title: t(`${id}.title`),
+        price: t(`${id}.price`),
+        description: t(`${id}.description`),
+        features: t.raw(`${id}.features`) as string[],
+        popular: id === "fullStack",
+    }));
+
     return (
         <section id="services" className="py-32 bg-secondary relative overflow-hidden">
             {/* Background elements */}
@@ -64,11 +34,10 @@ export default function Services() {
                     className="text-center mb-20"
                 >
                     <h2 className="text-4xl md:text-6xl font-heading font-extrabold mb-6">
-                        Elite <span className="text-accent-red">Services</span>
+                        {t("elite")} <span className="text-accent-red">{t("title")}</span>
                     </h2>
                     <p className="text-muted text-lg max-w-2xl mx-auto">
-                        Comprehensive solutions tailored for high-end clients.
-                        From luxury landing pages to enterprise-grade platforms.
+                        {t("description")}
                     </p>
                 </motion.div>
 
@@ -88,7 +57,7 @@ export default function Services() {
                             {service.popular && (
                                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     <span className="bg-gradient-to-r from-accent-red to-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                                        Most Popular
+                                        {t("popular")}
                                     </span>
                                 </div>
                             )}
@@ -112,7 +81,7 @@ export default function Services() {
                                     href={`/services/${service.id}`}
                                     className="w-full py-4 bg-secondary hover:bg-secondary/80 text-foreground border border-border rounded-xl flex items-center justify-center font-bold transition-all"
                                 >
-                                    Learn More <ArrowRight size={18} className="ml-2" />
+                                    {t("learnMore")} <ArrowRight size={18} className="ml-2" />
                                 </Link>
                                 <Link
                                     href="/#contact"
@@ -121,7 +90,7 @@ export default function Services() {
                                         : "bg-background hover:bg-background/80 text-foreground border border-border"
                                         }`}
                                 >
-                                    Request Quote
+                                    {t("requestQuote")}
                                 </Link>
                             </div>
                         </motion.div>
@@ -139,7 +108,7 @@ export default function Services() {
                         href="/services"
                         className="inline-flex items-center text-muted hover:text-accent-red transition-colors group text-sm font-medium tracking-widest uppercase"
                     >
-                        Explore All Services <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        {t("exploreAll")} <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </motion.div>
             </div>

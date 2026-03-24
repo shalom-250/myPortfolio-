@@ -1,0 +1,189 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "services": "Services",
+    "blog": "Blog",
+    "about": "About",
+    "portal": "Portal",
+    "hireMe": "Hire Me",
+    "themeMode": "Theme Mode",
+    "clientPortal": "Client Portal",
+    "language": "Language"
+  },
+  "Hero": {
+    "title1": "Full Stack Developer",
+    "title2": "Mobile Specialist",
+    "subtitle": "Building Scalable Systems with Precision & Elegance. Luxury Web & Mobile Experiences Engineered for Performance.",
+    "hireMe": "Hire Me",
+    "viewProjects": "View Projects"
+  },
+  "About": {
+    "title": "About",
+    "me": "Me",
+    "description": "I'm a full-stack developer dedicated to building premium digital experiences. I bridge the gap between complex engineering and elegant design.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Mobile",
+    "devops": "DevOps & DB"
+  },
+  "Services": {
+    "title": "Services",
+    "elite": "Elite",
+    "description": "Comprehensive solutions tailored for high-end clients. From luxury landing pages to enterprise-grade platforms.",
+    "popular": "Most Popular",
+    "learnMore": "Learn More",
+    "requestQuote": "Request Quote",
+    "exploreAll": "Explore All Services",
+    "luxuryWeb": {
+        "title": "Luxury Web Design",
+        "price": "From RFW 2,499,000",
+        "description": "Exquisite digital experiences crafted for top-tier brands.",
+        "features": ["Custom UI/UX Design", "Framer Motion Animations", "SEO Optimization", "Responsive PWA", "CMS Integration"]
+    },
+    "fullStack": {
+        "title": "Full Stack Platform",
+        "price": "From RFW 5,999,000",
+        "description": "Comprehensive digital ecosystems built for scalability.",
+        "features": ["Everything in Web Design", "Custom Backend Architecture", "Database Strategy", "Authentication & Security", "Payment Gateway Integration"]
+    },
+    "mobileApps": {
+        "title": "Mobile App Development",
+        "price": "From RFW 4,999,000",
+        "description": "High-performance native and cross-platform mobile apps.",
+        "features": ["React Native / Expo", "App Store Deployment", "Push Notifications", "Offline Sync", "Real-time Features"]
+    },
+    "maintenance": {
+        "title": "Elite System Maintenance",
+        "price": "From RFW 999,000 / mo",
+        "description": "Continuous optimization and proactive monitoring.",
+        "features": ["Bug & Stability Fixes", "Performance Optimization", "Security Audits", "Database Tuning", "Infrastructure Management"]
+    },
+    "mentorship": {
+        "title": "Professional Coding Mentorship",
+        "price": "Custom Sessions",
+        "description": "Accelerate your career with one-on-one expert guidance.",
+        "features": ["Advanced Node.js / NestJS", "React / Next.js Mastery", "System Architecture Design", "Database Modeling", "Professional Workflow (Git/CI/CD)"]
+    }
+  },
+  "Projects": {
+    "title": "Work",
+    "selected": "Selected",
+    "description": "A collection of digital experiences I've engineered. Translating complex problems into elegant, scalable solutions.",
+    "all": "All",
+    "webApps": "Web Apps",
+    "mobileApps": "Mobile Apps",
+    "systems": "Systems",
+    "viewAll": "View All Projects",
+    "items": {
+      "aura": {
+        "title": "Aura E-Commerce Platform",
+        "description": "A luxury fashion e-commerce platform with real-time inventory and modern checkout experience.",
+        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+      },
+      "vanguard": {
+        "title": "Vanguard Fitness App",
+        "description": "Cross-platform mobile application for personalized workout tracking and analytics.",
+        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+      },
+      "nimbus": {
+        "title": "Nimbus Cloud ERP",
+        "description": "Enterprise resource planning system with modular architecture and role-based access.",
+        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+      },
+      "luxe": {
+        "title": "Luxe Real Estate",
+        "description": "High-end real estate listing platform with interactive maps and animated transitions.",
+        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "client": "Client",
+    "description": "Hear from the innovators and leaders I've had the privilege to partner with.",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechFlow",
+        "content": "Working with Shalom was a game-changer for our platform. The attention to detail and engineering excellence is second to none."
+      },
+      "david": {
+        "name": "David Chen",
+        "role": "Founder, Zenith AI",
+        "content": "The luxury aesthetic they brought to our web presence immediately increased our conversion rate. Truly a top-tier developer."
+      },
+      "aisha": {
+        "name": "Aisha Kamali",
+        "role": "Product Manager, Nile Pay",
+        "content": "Highly professional and delivered a complex fintech platform ahead of schedule. The code quality is exceptional."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Start a",
+    "project": "Project",
+    "description": "Ready to bring your vision to life? Fill out the form below to request a quote or schedule a consultation.",
+    "personalInfo": "Personal Info",
+    "projectScope": "Project Scope",
+    "details": "Details",
+    "fullName": "Full Name",
+    "phoneNumber": "Phone Number",
+    "email": "Email Address",
+    "projectType": "Project Type",
+    "objective": "Primary Project Objective",
+    "projectDetails": "Project Details",
+    "srs": "SRS Document (Optional)",
+    "timeline": "Desired Timeline (Optional)",
+    "back": "Back",
+    "continue": "Continue",
+    "submit": "Submit Request",
+    "successTitle": "Request Received",
+    "successMessage": "Thank you for reaching out. I've received your project details and will be in touch within 24 hours to discuss the next steps.",
+    "sendAnother": "Send Another Request"
+  },
+  "Footer": {
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "description": "Building Scalable Systems with Precision & Elegance. Luxury Web & Mobile Experiences Engineered for Performance.",
+    "allRights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "DashboardLayout": {
+    "dashboard": "Dashboard",
+    "nav": {
+      "overview": "Overview",
+      "projects": "Projects",
+      "analytics": "Analytics",
+      "messages": "Messages",
+      "settings": "Settings"
+    },
+    "notifTitle": "Notifications",
+    "readAll": "Read All",
+    "clearAll": "Clear All",
+    "viewAll": "View All",
+    "backToPortfolio": "Back to Portfolio",
+    "premiumClient": "Premium Client",
+    "signOut": "Sign Out",
+    "notif": {
+      "milestone": { "title": "Milestone Completed", "msg": "Homepage Design has been approved." },
+      "message": { "title": "New Message", "msg": "Shalom sent you a project update." },
+      "invoice": { "title": "Invoice Paid", "msg": "Payment for Phase 1 was received." }
+    }
+  },
+  "DashboardOverview": {
+    "welcome": "Welcome back",
+    "subtitle": "Here's what's happening with your projects today.",
+    "stats": {
+      "activeProjects": "Active Projects",
+      "pendingTasks": "Pending Tasks",
+      "completedMilestones": "Completed Milestones",
+      "allTime": "All time"
+    },
+    "viewDetails": "View Details",
+    "recentActivity": "Recent Activity",
+    "activityDetail": "Activity Detail",
+    "viewProject": "View Full Project"
+  }
+}

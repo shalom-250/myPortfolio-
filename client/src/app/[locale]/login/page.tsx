@@ -23,10 +23,15 @@ export default function Login() {
                 transition={{ duration: 0.6 }}
                 className="w-full max-w-md bg-secondary/30 backdrop-blur-xl border border-white/10 rounded-3xl p-8 relative z-10 shadow-2xl"
             >
-                <div className="text-center mb-8">
-                    <Link href="/" className="text-3xl font-heading font-bold tracking-tighter mb-2 flex items-center justify-center space-x-2">
-                        <Image src="/logo.png" alt="Shalom Dev" width={36} height={36} className="rounded-md" />
-                        <span>Shalom Dev<span className="text-accent-red">.</span></span>
+                <div className="text-center mb-10">
+                    <Link href="/" className="flex flex-col items-center justify-center space-y-4 group mb-2">
+                        <div className="relative">
+                            <Image src="/logo.png" alt="Shalom Dev" width={64} height={64} className="rounded-[2rem] shadow-2xl transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 border border-white/10" />
+                            <div className="absolute -inset-1 bg-accent-red/20 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
+                        <span className="text-4xl font-black font-heading tracking-tighter bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent group-hover:text-accent-red transition-all duration-300">
+                            SHALOM <span className="text-accent-red">DEV</span>
+                        </span>
                     </Link>
                     <h2 className="text-xl font-medium mt-4">Client Portal</h2>
                     <p className="text-muted text-sm mt-2">

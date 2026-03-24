@@ -1,0 +1,189 @@
+{
+  "Navbar": {
+    "home": "Startseite",
+    "projects": "Projekte",
+    "services": "Dienstleistungen",
+    "blog": "Blog",
+    "about": "Über mich",
+    "portal": "Portal",
+    "hireMe": "Engagieren",
+    "themeMode": "Themenmodus",
+    "clientPortal": "Kundenportal",
+    "language": "Sprache"
+  },
+  "Hero": {
+    "title1": "Full-Stack-Entwickler",
+    "title2": "Mobil-Spezialist",
+    "subtitle": "Skalierbare Systeme mit Präzision und Eleganz bauen. Luxuriöse Web- und Mobile-Erlebnisse, auf Leistung getrimmt.",
+    "hireMe": "Engagieren",
+    "viewProjects": "Projekte ansehen"
+  },
+  "About": {
+    "title": "Über",
+    "me": "mich",
+    "description": "Ich bin ein Full-Stack-Entwickler, der sich der Erstellung erstklassiger digitaler Erlebnisse verschrieben hat. Ich schlage die Brücke zwischen komplexer Technik und elegantem Design.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Mobil",
+    "devops": "DevOps & DB"
+  },
+  "Services": {
+    "title": "Dienstleistungen",
+    "elite": "Elite",
+    "description": "Umfassende Lösungen, zugeschnitten auf anspruchsvolle Kunden. Von luxuriösen Landingpages bis hin zu Unternehmensplattformen.",
+    "popular": "Beliebteste",
+    "learnMore": "Mehr erfahren",
+    "requestQuote": "Angebot anfordern",
+    "exploreAll": "Alle Dienste erkunden",
+    "luxuryWeb": {
+        "title": "Luxus-Webdesign",
+        "price": "Ab RFW 2.499.000",
+        "description": "Exquisite digitale Erlebnisse, maßgeschneidert für Top-Marken.",
+        "features": ["Individuelles UI/UX-Design", "Framer Motion Animationen", "SEO-Optimierung", "Responsive PWA", "CMS-Integration"]
+    },
+    "fullStack": {
+        "title": "Full-Stack-Plattform",
+        "price": "Ab RFW 5.999.000",
+        "description": "Umfassende digitale Ökosysteme, auf Skalierbarkeit ausgelegt.",
+        "features": ["Alles in Webdesign", "Individuelle Backend-Architektur", "Datenbankstrategie", "Authentifizierung & Sicherheit", "Zahlungsgateway-Integration"]
+    },
+    "mobileApps": {
+        "title": "Mobile-App-Entwicklung",
+        "price": "Ab RFW 4.999.000",
+        "description": "Hochleistungsfähige native und plattformübergreifende mobile Apps.",
+        "features": ["React Native / Expo", "App Store Deployment", "Push-Benachrichtigungen", "Offline-Synchronisation", "Echtzeit-Funktionen"]
+    },
+    "maintenance": {
+        "title": "Elite-Systemwartung",
+        "price": "Ab RFW 999.000 / Monat",
+        "description": "Kontinuierliche Optimierung und proaktive Überwachung.",
+        "features": ["Fehlerbehebung & Stabilität", "Leistungsoptimierung", "Sicherheits-Audits", "Datenbank-Tuning", "Infrastruktur-Management"]
+    },
+    "mentorship": {
+        "title": "Professionelles Coding-Mentoring",
+        "price": "Individuelle Sitzungen",
+        "description": "Beschleunigen Sie Ihre Karriere mit persönlicher Expertenberatung.",
+        "features": ["Fortgeschrittenes Node.js / NestJS", "React / Next.js Meisterschaft", "Systemarchitektur-Design", "Datenbankmodellierung", "Professioneller Workflow (Git/CI/CD)"]
+    }
+  },
+  "Projects": {
+    "title": "Arbeiten",
+    "selected": "Ausgewählte",
+    "description": "Eine Sammlung von digitalen Erlebnissen, die ich entwickelt habe. Komplexe Probleme in elegante, skalierbare Lösungen verwandeln.",
+    "all": "Alle",
+    "webApps": "Web-Apps",
+    "mobileApps": "Mobil-Apps",
+    "systems": "Systeme",
+    "viewAll": "Alle Projekte ansehen",
+    "items": {
+      "aura": {
+        "title": "Aura E-Commerce Plattform",
+        "description": "Eine luxuriöse Mode-E-Commerce-Plattform mit Echtzeit-Inventar und modernem Checkout-Erlebnis.",
+        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+      },
+      "vanguard": {
+        "title": "Vanguard Fitness App",
+        "description": "Plattformübergreifende mobile Anwendung für personalisiertes Trainingstracking und Analysen.",
+        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+      },
+      "nimbus": {
+        "title": "Nimbus Cloud ERP",
+        "description": "Enterprise Resource Planning System mit modularer Architektur und rollenbasierter Zugriffskontrolle.",
+        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+      },
+      "luxe": {
+        "title": "Luxe Immobilien",
+        "description": "Hochwertige Immobilienplattform mit interaktiven Karten und animierten Übergängen.",
+        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+      }
+    }
+  },
+  "Testimonials": {
+    "title": "Kunden",
+    "client": "-Referenzen",
+    "description": "Hören Sie von den Innovatoren und Führungskräften, mit denen ich zusammenarbeiten durfte.",
+    "items": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "role": "CEO, TechFlow",
+        "content": "Die Zusammenarbeit mit Shalom war ein Wendepunkt für unsere Plattform. Die Liebe zum Detail und die technische Exzellenz sind unübertroffen."
+      },
+      "david": {
+        "name": "David Chen",
+        "role": "Gründer, Zenith AI",
+        "content": "Die luxuriöse Ästhetik, die sie in unsere Webpräsenz eingebracht haben, hat unsere Konversionsrate sofort erhöht. Wahrlich ein erstklassiger Entwickler."
+      },
+      "aisha": {
+        "name": "Aisha Kamali",
+        "role": "Produktmanagerin, Nile Pay",
+        "content": "Äußerst professionell und lieferte eine komplexe Fintech-Plattform vor dem Zeitplan ab. Die Codequalität ist außergewöhnlich."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Starten Sie ein",
+    "project": "Projekt",
+    "description": "Bereit, Ihre Vision zum Leben zu erwecken? Füllen Sie das folgende Formular aus, um ein Angebot anzufordern oder ein Beratungsgespräch zu vereinbaren.",
+    "personalInfo": "Persönliche Infos",
+    "projectScope": "Projektumfang",
+    "details": "Details",
+    "fullName": "Vollständiger Name",
+    "phoneNumber": "Telefonnummer",
+    "email": "E-Mail-Adresse",
+    "projectType": "Projekttyp",
+    "objective": "Hauptprojektziel",
+    "projectDetails": "Projektdetails",
+    "srs": "SRS-Dokument (Optional)",
+    "timeline": "Gewünschter Zeitplan (Optional)",
+    "back": "Zurück",
+    "continue": "Weiter",
+    "submit": "Anfrage senden",
+    "successTitle": "Anfrage erhalten",
+    "successMessage": "Vielen Dank für Ihre Kontaktaufnahme. Ich habe Ihre Projektdetails erhalten und werde mich innerhalb von 24 Stunden bei Ihnen melden, um die nächsten Schritte zu besprechen.",
+    "sendAnother": "Weitere Anfrage senden"
+  },
+  "Footer": {
+    "quickLinks": "Schnelllinks",
+    "connect": "Verbinden",
+    "description": "Skalierbare Systeme mit Präzision und Eleganz bauen. Luxuriöse Web- und Mobile-Erlebnisse, auf Leistung getrimmt.",
+    "allRights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen"
+  },
+  "DashboardLayout": {
+    "dashboard": "Dashboard",
+    "nav": {
+      "overview": "Übersicht",
+      "projects": "Projekte",
+      "analytics": "Analysen",
+      "messages": "Nachrichten",
+      "settings": "Einstellungen"
+    },
+    "notifTitle": "Benachrichtigungen",
+    "readAll": "Alles lesen",
+    "clearAll": "Alles löschen",
+    "viewAll": "Alle ansehen",
+    "backToPortfolio": "Zurück zum Portfolio",
+    "premiumClient": "Premium-Kunde",
+    "signOut": "Abmelden",
+    "notif": {
+      "milestone": { "title": "Meilenstein erreicht", "msg": "Das Homepage-Design wurde genehmigt." },
+      "message": { "title": "Neue Nachricht", "msg": "Shalom hat Ihnen ein Projekt-Update gesendet." },
+      "invoice": { "title": "Rechnung bezahlt", "msg": "Zahlung für Phase 1 wurde empfangen." }
+    }
+  },
+  "DashboardOverview": {
+    "welcome": "Willkommen zurück",
+    "subtitle": "Hier ist der aktuelle Stand Ihrer Projekte heute.",
+    "stats": {
+      "activeProjects": "Aktive Projekte",
+      "pendingTasks": "Ausstehende Aufgaben",
+      "completedMilestones": "Abgeschlossene Meilensteine",
+      "allTime": "Gesamte Zeit"
+    },
+    "viewDetails": "Details anzeigen",
+    "recentActivity": "Letzte Aktivität",
+    "activityDetail": "Aktivitätsdetails",
+    "viewProject": "Vollständiges Projekt ansehen"
+  }
+}

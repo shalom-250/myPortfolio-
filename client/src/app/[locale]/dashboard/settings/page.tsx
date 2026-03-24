@@ -1,7 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { User, Bell, Shield, Palette, Save } from "lucide-react";
+import { User, Bell, Palette, Save } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function DashboardSettings() {
     return (
@@ -34,23 +36,25 @@ export default function DashboardSettings() {
                 >
                     <div className="flex items-center space-x-3 mb-8">
                         <User className="text-accent-red" size={24} />
-                        <h2 className="text-xl font-bold font-heading">Profile Information</h2>
+                        <h2 className="text-xl font-bold font-heading text-foreground">Profile Information</h2>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label className="block text-xs font-bold uppercase tracking-widest text-muted mb-2 ml-1">Full Name</label>
                             <input
+                                suppressHydrationWarning
                                 type="text"
                                 defaultValue="John Doe"
-                                className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-accent-red transition-all"
+                                className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-accent-red transition-all"
                             />
                         </div>
                         <div>
                             <label className="block text-xs font-bold uppercase tracking-widest text-muted mb-2 ml-1">Email Address</label>
                             <input
+                                suppressHydrationWarning
                                 type="email"
                                 defaultValue="john@example.com"
-                                className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-accent-red transition-all"
+                                className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-1 focus:ring-accent-red transition-all"
                             />
                         </div>
                     </div>
@@ -64,27 +68,7 @@ export default function DashboardSettings() {
                         transition={{ delay: 0.3 }}
                         className="bg-secondary border border-border rounded-3xl p-8"
                     >
-                        <div className="flex items-center space-x-3 mb-8">
-                            <Bell className="text-accent-red" size={24} />
-                            <h2 className="text-xl font-bold font-heading">Notifications</h2>
-                        </div>
-                        <div className="space-y-4">
-                            {[
-                                { label: "Project Updates", desc: "Get notified when milestones are reached" },
-                                { label: "Direct Messages", desc: "Alerts for new messages in chat" },
-                                { label: "Security Alerts", desc: "Important account activity notices" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex items-center justify-between py-2">
-                                    <div>
-                                        <p className="font-bold text-sm">{item.label}</p>
-                                        <p className="text-xs text-muted">{item.desc}</p>
-                                    </div>
-                                    <div className="w-10 h-5 bg-accent-red rounded-full relative cursor-pointer shadow-[0_0_10px_rgba(255,49,49,0.3)]">
-                                        <div className="absolute right-1 top-1 w-3 h-3 bg-white rounded-full"></div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <NotificationSettings />
                     </motion.div>
 
                     <motion.div
@@ -94,18 +78,15 @@ export default function DashboardSettings() {
                         className="bg-secondary border border-border rounded-3xl p-8"
                     >
                         <div className="flex items-center space-x-3 mb-8">
-                            <Shield className="text-accent-red" size={24} />
-                            <h2 className="text-xl font-bold font-heading">Security</h2>
+                            <Palette className="text-accent-red" size={24} />
+                            <h2 className="text-xl font-bold font-heading text-foreground">Appearance</h2>
                         </div>
-                        <div className="space-y-4">
-                            <button className="w-full text-left p-4 bg-background/50 border border-white/10 rounded-xl hover:border-accent-red/30 transition-all group">
-                                <p className="font-bold text-sm group-hover:text-accent-red transition-colors">Change Password</p>
-                                <p className="text-xs text-muted">Update your login credentials</p>
-                            </button>
-                            <button className="w-full text-left p-4 bg-background/50 border border-white/10 rounded-xl hover:border-accent-red/30 transition-all group">
-                                <p className="font-bold text-sm group-hover:text-accent-red transition-colors">Two-Factor Auth</p>
-                                <p className="text-xs text-muted">Secure your account with 2FA</p>
-                            </button>
+                        <div className="flex items-center justify-between p-4 bg-background border border-border rounded-xl">
+                            <div>
+                                <p className="font-bold text-sm text-foreground">Theme Mode</p>
+                                <p className="text-xs text-muted">Switch between dark and light aesthetics</p>
+                            </div>
+                            <ThemeToggle />
                         </div>
                     </motion.div>
                 </div>
@@ -117,5 +98,49 @@ export default function DashboardSettings() {
                 </div>
             </div>
         </div>
+    );
+}
+
+function NotificationSettings() {
+    const [settings, setSettings] = useState({
+        project: true,
+        messages: true,
+        security: true
+    });
+
+    const toggles = [
+        { id: 'project', label: "Project Updates", desc: "Get notified when milestones are reached" },
+        { id: 'messages', label: "Direct Messages", desc: "Alerts for new messages in chat" },
+        { id: 'security', label: "Security Alerts", desc: "Important account activity notices" }
+    ] as const;
+
+    return (
+        <>
+            <div className="flex items-center space-x-3 mb-8">
+                <Bell className="text-accent-red" size={24} />
+                <h2 className="text-xl font-bold font-heading text-foreground">Notifications</h2>
+            </div>
+            <div className="space-y-4">
+                {toggles.map((item) => (
+                    <div key={item.id} className="flex items-center justify-between py-2 group">
+                        <div>
+                            <p className="font-bold text-sm text-foreground group-hover:text-accent-red transition-colors">{item.label}</p>
+                            <p className="text-xs text-muted leading-relaxed">{item.desc}</p>
+                        </div>
+                        <button 
+                            onClick={() => setSettings(prev => ({ ...prev, [item.id]: !prev[item.id] }))}
+                            className={`w-12 h-6 rounded-full relative transition-all duration-300 ${
+                                settings[item.id as keyof typeof settings] ? "bg-accent-red shadow-[0_0_15px_rgba(255,49,49,0.3)]" : "bg-black/10 dark:bg-white/10"
+                            }`}
+                        >
+                            <motion.div 
+                                animate={{ x: settings[item.id as keyof typeof settings] ? 26 : 4 }}
+                                className="absolute top-1 w-4 h-4 bg-white rounded-full shadow-sm"
+                            />
+                        </button>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }

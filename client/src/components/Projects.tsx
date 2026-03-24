@@ -3,51 +3,29 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import { ExternalLink, Layout, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
-const categories = ["All", "Web Apps", "Mobile Apps", "Systems"];
-
-const projects = [
-    {
-        id: 1,
-        title: "Aura E-Commerce Platform",
-        category: "Web Apps",
-        description: "A luxury fashion e-commerce platform with real-time inventory and modern checkout experience.",
-        tech: ["Next.js", "Tailwind", "PostgreSQL", "Stripe"],
-        image: "/project/AuraE-CommercePlatform.png"
-    },
-    {
-        id: 2,
-        title: "Vanguard Fitness App",
-        category: "Mobile Apps",
-        description: "Cross-platform mobile application for personalized workout tracking and analytics.",
-        tech: ["React Native", "NestJS", "MongoDB", "Redux"],
-        image: "/project/VanguardFitnessApp.png"
-    },
-    {
-        id: 3,
-        title: "Nimbus Cloud ERP",
-        category: "Systems",
-        description: "Enterprise resource planning system with modular architecture and role-based access.",
-        tech: ["React", "Go", "PostgreSQL", "Docker"],
-        image: "/project/CloudERP.png"
-    },
-    {
-        id: 4,
-        title: "Luxe Real Estate",
-        category: "Web Apps",
-        description: "High-end real estate listing platform with interactive maps and animated transitions.",
-        tech: ["Vue.js", "Laravel", "MySQL", "AWS S3"],
-        image: "/project/LuxerealEstets.png"
-    },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function Projects() {
+    const t = useTranslations("Projects");
     const [filter, setFilter] = useState("All");
 
-    const filteredProjects = filter === "All"
+    const categories = [t("all"), t("webApps"), t("mobileApps"), t("systems")];
+
+    const projectIds = ["aura", "vanguard", "nimbus", "luxe"];
+    const projects = projectIds.map(id => ({
+        id,
+        title: t(`items.${id}.title`),
+        category: id === "aura" || id === "luxe" ? t("webApps") : id === "vanguard" ? t("mobileApps") : t("systems"),
+        description: t(`items.${id}.description`),
+        tech: t.raw(`items.${id}.tech`) as string[],
+        image: id === "aura" ? "/project/AuraE-CommercePlatform.png" : id === "vanguard" ? "/project/VanguardFitnessApp.png" : id === "nimbus" ? "/project/CloudERP.png" : "/project/LuxerealEstets.png"
+    }));
+
+    const filteredProjects = filter === t("all")
         ? projects
         : projects.filter(p => p.category === filter);
 
@@ -63,11 +41,10 @@ export default function Projects() {
                 >
                     <div className="max-w-2xl">
                         <h2 className="text-4xl md:text-6xl font-heading font-extrabold mb-6">
-                            Selected <span className="text-accent-red">Work</span>
+                            {t("selected")} <span className="text-accent-red">{t("title")}</span>
                         </h2>
                         <p className="text-muted text-lg">
-                            A collection of digital experiences I've engineered.
-                            Translating complex problems into elegant, scalable solutions.
+                            {t("description")}
                         </p>
                     </div>
 
@@ -119,7 +96,6 @@ export default function Projects() {
                                     )}
 
                                     {/* Overlay on hover */}
-                                    {/* Overlay on hover */}
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm z-30">
                                         <Link href={`/projects/${project.id}`} className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-accent-red transition-all transform -translate-y-4 group-hover:translate-y-0 duration-300 delay-100" title="View Case Study">
                                             <Layout size={20} />
@@ -167,7 +143,7 @@ export default function Projects() {
                     href="/projects"
                     className="inline-flex items-center text-muted hover:text-accent-red transition-colors group text-sm font-medium tracking-widest uppercase"
                 >
-                    View All Projects <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    {t("viewAll")} <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
             </motion.div>
 
