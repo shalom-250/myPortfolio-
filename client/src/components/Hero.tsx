@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Code2 } from "lucide-react";
@@ -7,11 +8,22 @@ import { ArrowRight, Code2 } from "lucide-react";
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
-            {/* Animated Background Gradients */}
-            <div className="absolute inset-0 z-0 opacity-40">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full mix-blend-screen filter blur-[128px] animate-blob"></div>
-                <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-white/10 rounded-full mix-blend-screen filter blur-[128px] animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-[128px] animate-blob animation-delay-4000"></div>
+            {/* Background Image Overlay */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/xg.png"
+                    alt="Hero Background"
+                    fill
+                    className="object-cover object-center opacity-80 dark:opacity-95 transition-opacity duration-1000"
+                    sizes="100vw"
+                    priority
+                />
+            </div>
+
+            {/* Background Gradients */}
+            <div className="absolute inset-0 z-1 opacity-20">
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full filter blur-[128px]"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-red/20 rounded-full filter blur-[128px]"></div>
             </div>
 
             <div className="container mx-auto px-6 relative z-10 text-center">
@@ -19,10 +31,10 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 mb-8"
+                    className="inline-flex items-center space-x-2 bg-secondary rounded-full px-4 py-2 mb-8"
                 >
-                    <Code2 size={16} className="text-accent" />
-                    <span className="text-sm font-medium text-white/80 tracking-wide uppercase">Elite Developer</span>
+                    <Code2 size={16} className="text-accent-red" />
+                    <span className="text-sm font-medium text-muted tracking-wide uppercase">Shalom Dev</span>
                 </motion.div>
 
                 <motion.h1
@@ -32,12 +44,8 @@ export default function Hero() {
                     className="text-5xl md:text-7xl lg:text-8xl font-heading font-extrabold tracking-tight mb-6"
                 >
                     Full Stack Developer <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40 italic font-light">
-                        &
-                    </span>{" "}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-400">
-                        Mobile Specialist
-                    </span>
+                    <span className="text-muted italic font-light">&</span>{" "}
+                    <span className="text-accent-red">Mobile Specialist</span>
                 </motion.h1>
 
                 <motion.p
@@ -58,17 +66,22 @@ export default function Hero() {
                 >
                     <Link
                         href="#contact"
-                        className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-orange-600 text-white font-medium rounded-full transition-all shadow-[0_0_20px_rgba(237,112,20,0.4)] hover:shadow-[0_0_35px_rgba(237,112,20,0.6)] flex items-center justify-center transform hover:-translate-y-1"
+                        className="w-full sm:w-auto px-8 py-4 bg-accent-red hover:bg-red-600 text-white font-medium rounded-full transition-all shadow-[0_0_20px_rgba(255,49,49,0.4)] hover:shadow-[0_0_35px_rgba(255,49,49,0.6)] flex items-center justify-center transform hover:-translate-y-1"
                     >
                         Hire Me <ArrowRight size={20} className="ml-2" />
                     </Link>
                     <Link
                         href="#projects"
-                        className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium rounded-full transition-all flex items-center justify-center backdrop-blur-sm"
+                        className="w-full sm:w-auto px-8 py-4 bg-secondary/80 hover:bg-secondary border border-border/80 text-foreground font-medium rounded-full transition-all flex items-center justify-center backdrop-blur-sm shadow-sm"
                     >
                         View Projects
                     </Link>
                 </motion.div>
+            </div>
+
+            {/* Section Divider */}
+            <div className="absolute bottom-0 left-0 w-full flex justify-center pb-8">
+                <div className="h-px w-32 bg-gradient-to-r from-transparent via-accent-red/30 to-transparent"></div>
             </div>
         </section>
     );

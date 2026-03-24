@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Lock, Mail, ArrowRight, ArrowLeft } from "lucide-react";
 
 export default function Login() {
@@ -10,7 +11,6 @@ export default function Login() {
 
     return (
         <div className="min-h-screen bg-background flex flex-col items-center justify-center relative overflow-hidden p-6 text-white">
-            {/* Background decoration */}
             <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-background to-background z-0"></div>
 
             <Link href="/" className="absolute top-8 left-8 text-muted hover:text-white transition-colors flex items-center z-20">
@@ -24,15 +24,15 @@ export default function Login() {
                 className="w-full max-w-md bg-secondary/30 backdrop-blur-xl border border-white/10 rounded-3xl p-8 relative z-10 shadow-2xl"
             >
                 <div className="text-center mb-8">
-                    <Link href="/" className="text-3xl font-heading font-bold tracking-tighter mb-2 inline-block">
-                        Elite<span className="text-accent">Dev</span>
+                    <Link href="/" className="text-3xl font-heading font-bold tracking-tighter mb-2 flex items-center justify-center space-x-2">
+                        <Image src="/logo.png" alt="Shalom Dev" width={36} height={36} className="rounded-md" />
+                        <span>Shalom<span className="text-accent">.</span></span>
                     </Link>
                     <h2 className="text-xl font-medium mt-4">Client Portal</h2>
                     <p className="text-muted text-sm mt-2">
                         {isLogin ? "Sign in to manage your projects" : "Create an account to track progress"}
                     </p>
                 </div>
-
                 <form className="space-y-5">
                     <AnimatePresence mode="popLayout">
                         {!isLogin && (
@@ -82,13 +82,11 @@ export default function Login() {
                         </div>
                     </div>
 
-                    <Link href="/dashboard" passHref legacyBehavior>
-                        <button
-                            type="button"
-                            className="w-full py-3.5 bg-accent hover:bg-orange-600 text-white rounded-xl shadow-[0_0_20px_rgba(237,112,20,0.3)] transition-all flex items-center justify-center font-medium mt-6"
-                        >
-                            {isLogin ? "Sign In" : "Create Account"} <ArrowRight size={18} className="ml-2" />
-                        </button>
+                    <Link
+                        href="/dashboard"
+                        className="w-full py-3.5 bg-accent hover:bg-orange-600 text-white rounded-xl shadow-[0_0_20px_rgba(237,112,20,0.3)] transition-all flex items-center justify-center font-medium mt-6"
+                    >
+                        {isLogin ? "Sign In" : "Create Account"} <ArrowRight size={18} className="ml-2" />
                     </Link>
                 </form>
 

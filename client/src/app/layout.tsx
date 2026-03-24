@@ -13,9 +13,11 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "EliteDev | Full Stack Developer",
+  title: "Shalom Dev | Full Stack Developer",
   description: "Mobile & Luxury Web Specialist. Building Scalable Systems with Precision & Elegance.",
 };
+
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 export default function RootLayout({
   children,
@@ -23,9 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans bg-background text-foreground selection:bg-accent/30 selection:text-white`}>
-        {children}
+    <html lang="en" suppressHydrationWarning className="scroll-smooth" data-scroll-behavior="smooth">
+      <body className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans bg-background text-foreground selection:bg-accent-red/30 selection:text-white`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

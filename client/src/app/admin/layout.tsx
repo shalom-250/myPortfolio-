@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { LayoutDashboard, Users, FileText, MessageSquare, Settings, LogOut, Menu, X, Bell, LayoutTemplate } from "lucide-react";
 
@@ -33,8 +34,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                     }`}
             >
                 <div className="h-20 flex items-center justify-between px-6 border-b border-white/5">
-                    <Link href="/" className="text-2xl font-heading font-bold tracking-tighter">
-                        Elite<span className="text-accent">Admin</span>
+                    <Link href="/" className="text-2xl font-heading font-bold tracking-tighter flex items-center space-x-2">
+                        <Image src="/logo.png" alt="Shalom Dev" width={28} height={28} className="rounded-md" />
+                        <span>Admin<span className="text-accent">.</span></span>
                     </Link>
                     <button className="lg:hidden text-white hover:text-accent" onClick={() => setSidebarOpen(false)}>
                         <X size={20} />
@@ -49,8 +51,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                                 key={item.name}
                                 href={item.href}
                                 className={`group relative flex items-center space-x-3 px-4 py-3 rounded-xl transition-all ${isActive
-                                        ? "bg-accent/10 text-accent"
-                                        : "text-muted hover:bg-white/5 hover:text-white"
+                                    ? "bg-accent/10 text-accent"
+                                    : "text-muted hover:bg-white/5 hover:text-white"
                                     }`}
                             >
                                 <item.icon size={20} className={isActive ? "text-accent" : "group-hover:text-white text-muted"} />
@@ -69,10 +71,10 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <div className="absolute bottom-0 w-full p-4 border-t border-white/5">
                     <div className="flex items-center space-x-3 px-4 py-3 mb-2 bg-white/5 rounded-xl">
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-white/20 to-white/5 border border-white/10 flex items-center justify-center text-white font-bold shadow-lg">
-                            ME
+                            SD
                         </div>
                         <div>
-                            <p className="text-sm font-medium text-white">Admin</p>
+                            <p className="text-sm font-medium text-white">Shalom Dev</p>
                             <p className="text-xs text-accent">Superuser</p>
                         </div>
                     </div>

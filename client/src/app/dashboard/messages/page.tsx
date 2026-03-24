@@ -11,10 +11,10 @@ export default function Messages() {
     const time = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     const [chatHistory, setChatHistory] = useState([
-        { id: 1, sender: "EliteDev", text: "Hello John! I've reviewed the requirements for the new feature.", time: "09:42 AM", isMe: false },
-        { id: 2, sender: "EliteDev", text: "The API integration will take about 2 days. Let me know if that works.", time: "09:43 AM", is.Me: false },
+        { id: 1, sender: "Shalom Dev", text: "Hello John! I've reviewed the requirements for the new feature.", time: "09:42 AM", isMe: false },
+        { id: 2, sender: "Shalom Dev", text: "The API integration will take about 2 days. Let me know if that works.", time: "09:43 AM", isMe: false },
         { id: 3, sender: "John Doe", text: "That sounds perfect. Can we also include the Stripe webhook?", time: "10:15 AM", isMe: true },
-        { id: 4, sender: "EliteDev", text: "Absolutely, I'll add that to the current sprint.", time: "10:20 AM", isMe: false },
+        { id: 4, sender: "Shalom Dev", text: "Absolutely, I'll add that to the current sprint.", time: "10:20 AM", isMe: false },
     ]);
 
     const handleSend = (e: React.FormEvent) => {
@@ -56,7 +56,7 @@ export default function Messages() {
                         </div>
                         <div className="flex-1 min-w-0">
                             <div className="flex justify-between items-baseline mb-1">
-                                <h4 className="text-white font-medium truncate">EliteDev</h4>
+                                <h4 className="text-white font-medium truncate">Shalom Dev</h4>
                                 <span className="text-xs text-accent">10:20 AM</span>
                             </div>
                             <p className="text-sm text-muted truncate">Absolutely, I'll add that to the sprint.</p>
@@ -73,10 +73,10 @@ export default function Messages() {
                 <div className="py-4 px-6 border-b border-white/5 flex justify-between items-center bg-background/40 backdrop-blur-md z-10">
                     <div className="flex items-center space-x-4 p-1">
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent to-orange-600 flex items-center justify-center text-white font-bold">
-                            ED
+                            SD
                         </div>
                         <div>
-                            <h3 className="text-white font-medium">EliteDev Support</h3>
+                            <h3 className="text-white font-medium">Shalom Dev Support</h3>
                             <p className="text-xs text-green-400 flex items-center">
                                 <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-1.5"></span> Online
                             </p>
@@ -100,8 +100,8 @@ export default function Messages() {
                         >
                             <div className={`max-w-[70%] ${msg.isMe ? "order-1" : "order-2"}`}>
                                 <div className={`px-5 py-3 rounded-2xl ${msg.isMe
-                                        ? "bg-accent text-white rounded-tr-none shadow-[0_5px_15px_rgba(237,112,20,0.2)]"
-                                        : "bg-white/10 border border-white/5 text-white/90 rounded-tl-none"
+                                    ? "bg-accent text-white rounded-tr-none shadow-[0_5px_15px_rgba(237,112,20,0.2)]"
+                                    : "bg-white/10 border border-white/5 text-white/90 rounded-tl-none"
                                     }`}>
                                     <p className="text-sm md:text-base leading-relaxed">{msg.text}</p>
                                 </div>

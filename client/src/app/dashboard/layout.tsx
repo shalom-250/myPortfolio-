@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { LayoutDashboard, FileText, MessageSquare, Settings, LogOut, Menu, X, Bell } from "lucide-react";
 
@@ -33,8 +34,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     }`}
             >
                 <div className="h-20 flex items-center justify-between px-6 border-b border-white/5">
-                    <Link href="/" className="text-2xl font-heading font-bold tracking-tighter">
-                        Elite<span className="text-accent">Dev</span>
+                    <Link href="/" className="text-2xl font-heading font-bold tracking-tighter flex items-center space-x-2">
+                        <Image src="/logo.png" alt="Shalom Developer" width={28} height={28} className="rounded-md" />
+                        <span>Shalom Dev<span className="text-accent">.</span></span>
                     </Link>
                     <button className="lg:hidden text-white hover:text-accent" onClick={() => setSidebarOpen(false)}>
                         <X size={20} />
@@ -49,8 +51,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 key={item.name}
                                 href={item.href}
                                 className={`group relative flex items-center space-x-3 px-4 py-3 rounded-xl transition-all ${isActive
-                                        ? "bg-accent/10 text-accent"
-                                        : "text-muted hover:bg-white/5 hover:text-white"
+                                    ? "bg-accent/10 text-accent"
+                                    : "text-muted hover:bg-white/5 hover:text-white"
                                     }`}
                             >
                                 <item.icon size={20} className={isActive ? "text-accent" : "group-hover:text-white text-muted"} />

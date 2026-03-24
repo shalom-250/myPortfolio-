@@ -5,6 +5,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
+  --color-accent-red: var(--accent-red);
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --font-sans: var(--font-inter);
@@ -12,12 +13,25 @@
 }
 
 :root {
+  --background: #ffffff;
+  --foreground: #0A0A0A;
+  --primary: #ffffff;
+  --accent: #ED7014;
+  --accent-red: #FF3131;
+  --secondary: #F8F8F8;
+  --muted: #666666;
+  --border: transparent;
+}
+
+.dark {
   --background: #0A0A0A;
   --foreground: #ffffff;
   --primary: #0A0A0A;
   --accent: #ED7014;
+  --accent-red: #FF3131;
   --secondary: #1F1F1F;
   --muted: #A0A0A0;
+  --border: transparent;
 }
 
 body {
