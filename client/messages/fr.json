@@ -1,10 +1,11 @@
 {
   "Navbar": {
-    "home": "Acceuil",
-    "projects": "Projets",
+    "about": "À Propos",
     "services": "Services",
+    "projects": "Projets",
     "blog": "Blog",
-    "about": "À propos",
+    "contact": "Contact",
+    "home": "Accueil",
     "portal": "Portail",
     "hireMe": "Engagez-moi",
     "themeMode": "Mode Thème",
@@ -13,142 +14,194 @@
   },
   "Hero": {
     "title1": "Développeur Full Stack",
-    "title2": "Spécialiste Mobile",
-    "subtitle": "Construction de systèmes évolutifs avec précision et élégance. Expériences Web & Mobiles de luxe conçues pour la performance.",
+    "title2": "Expert Mobile",
+    "subtitle": "Construire des systèmes évolutifs avec précision et élégance. Expériences web et mobiles de luxe conçues pour la performance.",
     "hireMe": "Engagez-moi",
     "viewProjects": "Voir les Projets"
   },
   "About": {
-    "title": "À propos de",
-    "me": "Moi",
-    "description": "Je suis un développeur full-stack dédié à la création d'expériences numériques haut de gamme. Je comble le fossé entre l'ingénierie complexe et le design élégant.",
-    "frontend": "Frontend",
-    "backend": "Backend",
+    "title": "À Propos",
+    "me": "de Moi",
+    "description": "Je suis un développeur full-stack dédié à la création d'expériences numériques premium. Je fais le pont entre l'ingénierie complexe et le design élégant.",
+    "frontend": "Front-end",
+    "backend": "Back-end",
     "mobile": "Mobile",
     "devops": "DevOps & DB"
   },
   "Services": {
     "title": "Services",
-    "elite": "d'Élite",
-    "description": "Des solutions complètes adaptées aux clients haut de gamme. Des pages de destination de luxe aux plateformes d'entreprise.",
-    "popular": "Le Plus Populaire",
+    "elite": "Élite",
+    "description": "Des solutions complètes conçues pour une clientèle exigeante. Des landing pages de luxe aux plateformes d'entreprise.",
+    "popular": "Le plus populaire",
     "learnMore": "En savoir plus",
-    "requestQuote": "Demander un Devis",
+    "requestQuote": "Demander un devis",
     "exploreAll": "Explorer tous les services",
     "luxuryWeb": {
-        "title": "Design Web de Luxe",
-        "price": "À partir de RFW 2,499,000",
-        "description": "Expériences numériques exquises conçues pour les marques de premier plan.",
-        "features": ["Design UI/UX personnalisé", "Animations Framer Motion", "Optimisation SEO", "PWA réactive", "Intégration CMS"]
+      "title": "Web Design de Luxe",
+      "price": "À partir de 2 499 000 RWF",
+      "description": "Expériences numériques raffinées conçues pour les marques haut de gamme.",
+      "features": [
+        "Design UI/UX personnalisé",
+        "Animations Framer Motion",
+        "Optimisation SEO",
+        "PWA réactive",
+        "Intégration CMS"
+      ]
     },
     "fullStack": {
-        "title": "Plateforme Full Stack",
-        "price": "À partir de RFW 5,999,000",
-        "description": "Écosystèmes numériques complets conçus pour l'évolutivité.",
-        "features": ["Tout dans le Design Web", "Architecture Backend personnalisée", "Stratégie de Base de Données", "Authentification & Sécurité", "Intégration de Passerelle de Paiement"]
+      "title": "Plateformes Full Stack",
+      "price": "À partir de 5 999 000 RWF",
+      "description": "Systèmes numériques complets conçus pour la croissance.",
+      "features": [
+        "Tout du web design",
+        "Architecture back-end sur mesure",
+        "Stratégie de base de données",
+        "Authentification & Sécurité",
+        "Intégration passerelle de paiement"
+      ]
     },
     "mobileApps": {
-        "title": "Développement d'Applications Mobiles",
-        "price": "À partir de RFW 4,999,000",
-        "description": "Applications mobiles natives et multiplateformes de haute performance.",
-        "features": ["React Native / Expo", "Déploiement sur App Store", "Notifications Push", "Synchronisation hors ligne", "Fonctionnalités en temps réel"]
+      "title": "Développement App Mobile",
+      "price": "À partir de 4 999 000 RWF",
+      "description": "Applications mobiles haute performance natives et cross-platform.",
+      "features": [
+        "React Native / Expo",
+        "Publication sur les stores",
+        "Notifications push",
+        "Synchronisation hors ligne",
+        "Fonctionnalités temps réel"
+      ]
     },
     "maintenance": {
-        "title": "Maintenance de Système d'Élite",
-        "price": "À partir de RFW 999,000 / mois",
-        "description": "Optimisation continue et surveillance proactive.",
-        "features": ["Correction de bugs & Stabilité", "Optimisation des performances", "Audits de sécurité", "Réglage de la base de données", "Gestion de l'infrastructure"]
+      "title": "Maintenance Système Élite",
+      "price": "À partir de 999 000 RWF / mois",
+      "description": "Optimisation continue et surveillance proactive.",
+      "features": [
+        "Correction de bugs & Stabilité",
+        "Optimisation des performances",
+        "Audits de sécurité",
+        "Tuning de base de données",
+        "Gestion d'infrastructure"
+      ]
     },
     "mentorship": {
-        "title": "Mentorat Professionnel en Codage",
-        "price": "Sessions personnalisées",
-        "description": "Accélérez votre carrière avec des conseils d'experts personnalisés.",
-        "features": ["Node.js / NestJS avancé", "Maîtrise de React / Next.js", "Conception d'architecture système", "Modélisation de base de données", "Flux de travail professionnel (Git/CI/CD)"]
+      "title": "Mentorat en Codage Pro",
+      "price": "Sessions personnalisées",
+      "description": "Accélérez votre carrière avec des conseils d'experts individuels.",
+      "features": [
+        "Node.js / NestJS avancé",
+        "Maîtrise React / Next.js",
+        "Design d'architecture système",
+        "Modélisation de données",
+        "Workflow professionnel (Git/CI/CD)"
+      ]
     }
   },
   "Projects": {
     "title": "Travaux",
     "selected": "Sélectionnés",
-    "description": "Une collection d'expériences numériques que j'ai conçues. Traduire des problèmes complexes en solutions élégantes et évolutives.",
-    "all": "Tout",
-    "webApps": "Apps Web",
-    "mobileApps": "Apps Mobiles",
+    "description": "Une collection d'expériences numériques que j'ai construites. Transformer des problèmes complexes en solutions élégantes.",
+    "all": "Tous",
+    "webApps": "Web Apps",
+    "mobileApps": "Mobiles",
     "systems": "Systèmes",
     "viewAll": "Voir tous les projets",
     "items": {
       "aura": {
         "title": "Plateforme E-Commerce Aura",
-        "description": "Une plateforme de commerce électronique de mode de luxe avec inventaire en temps réel et expérience de paiement moderne.",
-        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+        "description": "Une plateforme e-commerce de mode de luxe avec inventaire en temps réel.",
+        "tech": [
+          "Next.js",
+          "Tailwind",
+          "PostgreSQL",
+          "Stripe"
+        ]
       },
       "vanguard": {
-        "title": "Application Fitness Vanguard",
-        "description": "Application mobile multiplateforme pour le suivi personnalisé des entraînements et des analyses.",
-        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+        "title": "App Fitness Vanguard",
+        "description": "Application mobile cross-platform pour le suivi de l'entraînement personnalisé.",
+        "tech": [
+          "React Native",
+          "NestJS",
+          "MongoDB",
+          "Redux"
+        ]
       },
       "nimbus": {
-        "title": "ERP Cloud Nimbus",
-        "description": "Système de planification des ressources d'entreprise avec architecture modulaire et accès basé sur les rôles.",
-        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+        "title": "Nimbus Cloud ERP",
+        "description": "Système de planification des ressources d'entreprise avec architecture modulaire.",
+        "tech": [
+          "React",
+          "Go",
+          "PostgreSQL",
+          "Docker"
+        ]
       },
       "luxe": {
-        "title": "Immobilier de Luxe",
-        "description": "Plateforme de listage immobilier haut de gamme avec cartes interactives et transitions animées.",
-        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+        "title": "Luxe Real Estate",
+        "description": "Plateforme immobilière haut de gamme avec cartes interactives.",
+        "tech": [
+          "Vue.js",
+          "Laravel",
+          "MySQL",
+          "AWS S3"
+        ]
       }
     }
   },
   "Testimonials": {
-    "title": "Témoignages",
-    "client": "Clients",
-    "description": "Écoutez les innovateurs et les leaders avec lesquels j'ai eu le privilège de collaborer.",
+    "title": "Clients",
+    "client": "Témoignages",
+    "description": "Écoutez les innovateurs et les leaders avec qui j'ai eu le privilège de collaborer.",
     "items": {
       "sarah": {
         "name": "Sarah Johnson",
-        "role": "PDG, TechFlow",
-        "content": "Travailler avec Shalom a changé la donne pour notre plateforme. L'attention portée aux détails et l'excellence en ingénierie sont inégalées."
+        "role": "CEO, TechFlow",
+        "content": "Travailler avec Shalom a changé la donne pour notre plateforme. L'attention portée aux détails est inégalée."
       },
       "david": {
         "name": "David Chen",
         "role": "Fondateur, Zenith AI",
-        "content": "L'esthétique de luxe qu'ils ont apportée à notre présence sur le web a immédiatement augmenté notre taux de conversion. Vraiment un développeur de premier plan."
+        "content": "L'esthétique de luxe qu'il a apportée à notre présence web a immédiatement augmenté notre taux de conversion."
       },
       "aisha": {
         "name": "Aisha Kamali",
-        "role": "Chef de Produit, Nile Pay",
-        "content": "Très professionnel et a livré une plateforme fintech complexe avant l'échéance prévue. La qualité du code est exceptionnelle."
+        "role": "Product Manager, Nile Pay",
+        "content": "Très professionnel et a livré une plateforme fintech complexe avant l'échéance."
       }
     }
   },
   "Contact": {
-    "title": "Lancer un",
-    "project": "Projet",
-    "description": "Prêt à donner vie à votre vision ? Remplissez le formulaire ci-dessous pour demander un devis ou planifier une consultation.",
-    "personalInfo": "Infos Personnelles",
+    "title": {
+      "start": "Lançons votre",
+      "highlight": "Projet Élite"
+    },
+    "description": "Prêt à donner vie à votre vision ? Remplissez le formulaire ci-dessous pour demander un devis ou réserver une consultation.",
+    "personalInfo": "Informations Personnelles",
     "projectScope": "Portée du Projet",
     "details": "Détails",
     "fullName": "Nom Complet",
     "phoneNumber": "Numéro de Téléphone",
-    "email": "Adresse E-mail",
+    "email": "Adresse Email",
     "projectType": "Type de Projet",
-    "objective": "Objectif Principal du Projet",
+    "objective": "Objectif Principal",
     "projectDetails": "Détails du Projet",
-    "srs": "Document SRS (Optionnel)",
-    "timeline": "Délai Souhaité (Optionnel)",
+    "srs": "Fichier SRS (Optionnel)",
+    "timeline": "Calendrier souhaité (Optionnel)",
     "back": "Retour",
     "continue": "Continuer",
-    "submit": "Envoyer la Demande",
+    "submit": "Envoyer la demande",
     "successTitle": "Demande Reçue",
-    "successMessage": "Merci de nous avoir contactés. J'ai reçu les détails de votre projet et je vous contacterai dans les 24 heures pour discuter des prochaines étapes.",
+    "successMessage": "Merci de nous avoir contactés. Nous reviendrons vers vous sous 24h.",
     "sendAnother": "Envoyer une autre demande"
   },
   "Footer": {
     "quickLinks": "Liens Rapides",
-    "connect": "Connecter",
-    "description": "Construction de systèmes évolutifs avec précision et élégance. Expériences Web & Mobiles de luxe conçues pour la performance.",
+    "connect": "Réseaux",
+    "description": "Construire des systèmes évolutifs avec précision et élégance. Expériences web et mobiles de luxe.",
     "allRights": "Tous droits réservés.",
-    "privacy": "Politique de Confidentialité",
-    "terms": "Conditions d'Utilisation"
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
   },
   "DashboardLayout": {
     "dashboard": "Tableau de bord",
@@ -157,7 +210,8 @@
       "projects": "Projets",
       "analytics": "Analyses",
       "messages": "Messages",
-      "settings": "Paramètres"
+      "settings": "Paramètres",
+      "contract": "Contrat"
     },
     "notifTitle": "Notifications",
     "readAll": "Tout lire",
@@ -167,23 +221,127 @@
     "premiumClient": "Client Premium",
     "signOut": "Déconnexion",
     "notif": {
-      "milestone": { "title": "Étape franchie", "msg": "La conception de la page d'accueil a été approuvée." },
-      "message": { "title": "Nouveau message", "msg": "Shalom vous a envoyé une mise à jour du projet." },
-      "invoice": { "title": "Facture payée", "msg": "Le paiement de la phase 1 a été reçu." }
+      "milestone": {
+        "title": "Étape franchie",
+        "msg": "Le design de la page d'accueil a été approuvé."
+      },
+      "message": {
+        "title": "Nouveau message",
+        "msg": "Shalom vous a envoyé une mise à jour."
+      },
+      "invoice": {
+        "title": "Facture payée",
+        "msg": "Le paiement de la phase 1 a été reçu."
+      }
     }
   },
   "DashboardOverview": {
-    "welcome": "Bon retour",
-    "subtitle": "Voici ce qui se passe avec vos projets aujourd'hui.",
+    "welcome": "Bienvenue",
+    "subtitle": "Voici ce qui se passe sur vos projets aujourd'hui.",
     "stats": {
       "activeProjects": "Projets Actifs",
       "pendingTasks": "Tâches en attente",
-      "completedMilestones": "Étapes terminées",
-      "allTime": "Tout le temps"
+      "completedMilestones": "Étapes franchies",
+      "allTime": "Temps total"
     },
-    "viewDetails": "Voir les détails",
+    "viewDetails": "Voir détails",
     "recentActivity": "Activité récente",
     "activityDetail": "Détails de l'activité",
-    "viewProject": "Voir le projet complet"
+    "viewProject": "Voir tout le projet"
+  },
+  "DashboardContract": {
+    "title": "Gestion des Contrats",
+    "subtitle": "Réviser, signer et gérer vos accords de projet.",
+    "downloadBtn": "Télécharger PDF",
+    "uploadBtn": "Uploader Signé",
+    "statusTitle": "État de l'Accord",
+    "currentStatus": "Phase Actuelle",
+    "statusPending": "En attente de signature",
+    "statusSigned": "Légalement Actif",
+    "details": {
+      "type": "Type de Contrat",
+      "id": "ID de l'Accord",
+      "date": "Date de Création",
+      "value": "Valeur du Projet"
+    },
+    "legalNoticeTitle": "Accord Sécurisé",
+    "legalNoticeText": "Ce document est protégé par un cryptage avancé. Toutes les modifications sont enregistrées et auditées.",
+    "templateHeader": "Accord de Développement Standard",
+    "contractTitle": "CONTRAT DE SERVICES MAÎTRE",
+    "sections": {
+      "intro": {
+        "title": "1. PARTIES",
+        "content": "Cet accord est conclu entre Shalom Developer (le 'Prestataire') et le Client tel que spécifié dans le profil."
+      },
+      "scope": {
+        "title": "2. PORTÉE DU TRAVAIL",
+        "content": "Le Prestataire accepte de livrer les actifs numériques suivants dans les délais convenus:",
+        "items": [
+          "Design UI/UX personnalisé & Prototypage",
+          "Architecture Back-end Full Stack",
+          "Performance Mobile Responsive",
+          "Audit de performance & Support pendant 6 mois"
+        ]
+      },
+      "payment": {
+        "title": "3. CONDITIONS DE PAIEMENT",
+        "content": "Le paiement est dû lors de la première présentation des livrables. Des options d'équité sont disponibles."
+      }
+    },
+    "pending": "En attente de signature"
+  },
+  "Privacy": {
+    "badge": "Confiance & Sécurité",
+    "title": "Politique de Confidentialité",
+    "description": "Votre vie privée est primordiale. Apprenez comment nous protégeons vos données.",
+    "sections": {
+      "data": {
+        "title": "Protection des Données",
+        "content1": "Nous prenons la sécurité de vos données très au sérieux. Toutes les communications sont confidentielles.",
+        "content2": "Nous ne partageons pas vos détails de projet sans votre consentement écrit."
+      },
+      "transparency": {
+        "title": "Transparence Projet",
+        "content1": "Nous effectuons des audits réguliers des projets développés pendant les 6 premiers mois.",
+        "content2": "Vous avez une visibilité complète sur le processus via le portail client."
+      },
+      "contract": {
+        "title": "Confidentialité du Contrat",
+        "content1": "Nos contrats incluent des clauses de confidentialité (NDA) pour protéger vos intérêts."
+      }
+    },
+    "footer": {
+      "question": "Des questions ?",
+      "lastUpdated": "Dernière mise à jour",
+      "contactLegal": "Contacter le service juridique"
+    }
+  },
+  "Terms": {
+    "badge": "Accord Légal",
+    "title": "Conditions Générales",
+    "description": "La clarté et l'engagement sont la base de nos partenariats.",
+    "sections": {
+      "engagement": {
+        "title": "1. Engagement Projet",
+        "content1": "Tous les projets commencent par un contrat formel signé.",
+        "content2": "Nous nous engageons à livrer le template initial sous 5 jours ouvrés."
+      },
+      "payment": {
+        "title": "2. Paiement & Options d'Équité",
+        "content1": "Le paiement est dû dès la première présentation des livrables.",
+        "content2": "Nous proposons une option d'équité stratégique comme moyen de paiement."
+      },
+      "maintenance": {
+        "title": "3. Maintenance Post-Lancement",
+        "content1": "Nous offrons 6 mois de maintenance gratuite pour chaque projet."
+      },
+      "hosting": {
+        "title": "4. Infrastructure d'Hébergement",
+        "content1": "Le client est libre de choisir son hébergeur."
+      }
+    },
+    "footer": {
+      "agreement": "En utilisant nos services, vous acceptez ces conditions."
+    }
   }
 }

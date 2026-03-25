@@ -11,23 +11,29 @@ import { Link } from "@/i18n/routing";
 
 export default function Projects() {
     const t = useTranslations("Projects");
-    const [filter, setFilter] = useState("All");
+    const [filter, setFilter] = useState("all");
 
-    const categories = [t("all"), t("webApps"), t("mobileApps"), t("systems")];
+    const categories = [
+        { key: "all", label: t("all") },
+        { key: "web", label: t("webApps") },
+        { key: "mobile", label: t("mobileApps") },
+        { key: "system", label: t("systems") }
+    ];
 
     const projectIds = ["aura", "vanguard", "nimbus", "luxe"];
     const projects = projectIds.map(id => ({
         id,
         title: t(`items.${id}.title`),
-        category: id === "aura" || id === "luxe" ? t("webApps") : id === "vanguard" ? t("mobileApps") : t("systems"),
+        categoryKey: id === "aura" || id === "luxe" ? "web" : id === "vanguard" ? "mobile" : "system",
+        categoryLabel: id === "aura" || id === "luxe" ? t("webApps") : id === "vanguard" ? t("mobileApps") : t("systems"),
         description: t(`items.${id}.description`),
         tech: t.raw(`items.${id}.tech`) as string[],
         image: id === "aura" ? "/project/AuraE-CommercePlatform.png" : id === "vanguard" ? "/project/VanguardFitnessApp.png" : id === "nimbus" ? "/project/CloudERP.png" : "/project/LuxerealEstets.png"
     }));
 
-    const filteredProjects = filter === t("all")
+    const filteredProjects = filter === "all"
         ? projects
-        : projects.filter(p => p.category === filter);
+        : projects.filter(p => p.categoryKey === filter);
 
     return (
         <section id="projects" className="py-32 relative">
@@ -51,15 +57,15 @@ export default function Projects() {
                     <div className="flex flex-wrap gap-2 mt-8 md:mt-0">
                         {categories.map((cat) => (
                             <button
-                                key={cat}
-                                onClick={() => setFilter(cat)}
+                                key={cat.key}
+                                onClick={() => setFilter(cat.key)}
                                 suppressHydrationWarning
-                                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${filter === cat
+                                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${filter === cat.key
                                     ? "bg-accent-red text-white shadow-[0_0_15px_rgba(255,49,49,0.4)]"
                                     : "bg-secondary text-muted hover:bg-secondary/80 hover:text-foreground"
                                     }`}
                             >
-                                {cat}
+                                {cat.label}
                             </button>
                         ))}
                     </div>
@@ -112,7 +118,7 @@ export default function Projects() {
                                             {project.title}
                                         </h3>
                                         <span className="text-xs font-medium px-3 py-1 bg-secondary text-muted rounded-full whitespace-nowrap ml-4">
-                                            {project.category}
+                                            {project.categoryLabel}
                                         </span>
                                     </div>
                                     <p className="text-muted mb-6 leading-relaxed">

@@ -46,8 +46,8 @@ export default function Contact() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-6xl font-heading font-extrabold mb-6">
-                        {t("title")} <span className="text-accent-red">{t("project")}</span>
+                    <h2 className="text-4xl md:text-6xl font-heading font-extrabold mb-6 italic">
+                        {t("title.start")} <span className="text-accent-red not-italic">{t("title.highlight")}</span>
                     </h2>
                     <p className="text-muted text-lg max-w-2xl mx-auto">
                         {t("description")}

@@ -1,15 +1,16 @@
 {
   "Navbar": {
-    "home": "Home",
-    "projects": "Projects",
-    "services": "Services",
-    "blog": "Blog",
     "about": "About",
-    "portal": "Portal",
+    "services": "Services",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
     "hireMe": "Hire Me",
+    "portal": "Portal",
     "themeMode": "Theme Mode",
     "clientPortal": "Client Portal",
-    "language": "Language"
+    "language": "Language",
+    "home": "Home"
   },
   "Hero": {
     "title1": "Full Stack Developer",
@@ -36,34 +37,64 @@
     "requestQuote": "Request Quote",
     "exploreAll": "Explore All Services",
     "luxuryWeb": {
-        "title": "Luxury Web Design",
-        "price": "From RFW 2,499,000",
-        "description": "Exquisite digital experiences crafted for top-tier brands.",
-        "features": ["Custom UI/UX Design", "Framer Motion Animations", "SEO Optimization", "Responsive PWA", "CMS Integration"]
+      "title": "Luxury Web Design",
+      "price": "From RFW 2,499,000",
+      "description": "Exquisite digital experiences crafted for top-tier brands.",
+      "features": [
+        "Custom UI/UX Design",
+        "Framer Motion Animations",
+        "SEO Optimization",
+        "Responsive PWA",
+        "CMS Integration"
+      ]
     },
     "fullStack": {
-        "title": "Full Stack Platform",
-        "price": "From RFW 5,999,000",
-        "description": "Comprehensive digital ecosystems built for scalability.",
-        "features": ["Everything in Web Design", "Custom Backend Architecture", "Database Strategy", "Authentication & Security", "Payment Gateway Integration"]
+      "title": "Full Stack Platform",
+      "price": "From RFW 5,999,000",
+      "description": "Comprehensive digital ecosystems built for scalability.",
+      "features": [
+        "Everything in Web Design",
+        "Custom Backend Architecture",
+        "Database Strategy",
+        "Authentication & Security",
+        "Payment Gateway Integration"
+      ]
     },
     "mobileApps": {
-        "title": "Mobile App Development",
-        "price": "From RFW 4,999,000",
-        "description": "High-performance native and cross-platform mobile apps.",
-        "features": ["React Native / Expo", "App Store Deployment", "Push Notifications", "Offline Sync", "Real-time Features"]
+      "title": "Mobile App Development",
+      "price": "From RFW 4,999,000",
+      "description": "High-performance native and cross-platform mobile apps.",
+      "features": [
+        "React Native / Expo",
+        "App Store Deployment",
+        "Push Notifications",
+        "Offline Sync",
+        "Real-time Features"
+      ]
     },
     "maintenance": {
-        "title": "Elite System Maintenance",
-        "price": "From RFW 999,000 / mo",
-        "description": "Continuous optimization and proactive monitoring.",
-        "features": ["Bug & Stability Fixes", "Performance Optimization", "Security Audits", "Database Tuning", "Infrastructure Management"]
+      "title": "Elite System Maintenance",
+      "price": "From RFW 999,000 / mo",
+      "description": "Continuous optimization and proactive monitoring.",
+      "features": [
+        "Bug & Stability Fixes",
+        "Performance Optimization",
+        "Security Audits",
+        "Database Tuning",
+        "Infrastructure Management"
+      ]
     },
     "mentorship": {
-        "title": "Professional Coding Mentorship",
-        "price": "Custom Sessions",
-        "description": "Accelerate your career with one-on-one expert guidance.",
-        "features": ["Advanced Node.js / NestJS", "React / Next.js Mastery", "System Architecture Design", "Database Modeling", "Professional Workflow (Git/CI/CD)"]
+      "title": "Professional Coding Mentorship",
+      "price": "Custom Sessions",
+      "description": "Accelerate your career with one-on-one expert guidance.",
+      "features": [
+        "Advanced Node.js / NestJS",
+        "React / Next.js Mastery",
+        "System Architecture Design",
+        "Database Modeling",
+        "Professional Workflow (Git/CI/CD)"
+      ]
     }
   },
   "Projects": {
@@ -79,22 +110,42 @@
       "aura": {
         "title": "Aura E-Commerce Platform",
         "description": "A luxury fashion e-commerce platform with real-time inventory and modern checkout experience.",
-        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+        "tech": [
+          "Next.js",
+          "Tailwind",
+          "PostgreSQL",
+          "Stripe"
+        ]
       },
       "vanguard": {
         "title": "Vanguard Fitness App",
         "description": "Cross-platform mobile application for personalized workout tracking and analytics.",
-        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+        "tech": [
+          "React Native",
+          "NestJS",
+          "MongoDB",
+          "Redux"
+        ]
       },
       "nimbus": {
         "title": "Nimbus Cloud ERP",
         "description": "Enterprise resource planning system with modular architecture and role-based access.",
-        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+        "tech": [
+          "React",
+          "Go",
+          "PostgreSQL",
+          "Docker"
+        ]
       },
       "luxe": {
         "title": "Luxe Real Estate",
         "description": "High-end real estate listing platform with interactive maps and animated transitions.",
-        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+        "tech": [
+          "Vue.js",
+          "Laravel",
+          "MySQL",
+          "AWS S3"
+        ]
       }
     }
   },
@@ -121,26 +172,51 @@
     }
   },
   "Contact": {
-    "title": "Start a",
-    "project": "Project",
-    "description": "Ready to bring your vision to life? Fill out the form below to request a quote or schedule a consultation.",
-    "personalInfo": "Personal Info",
+    "badge": "Get In Touch",
+    "title": {
+      "start": "Let's Start Your",
+      "highlight": "Elite Project"
+    },
+    "description": "Ready to bring your vision to life? Fill out the form below to request a quote or book a consultation.",
+    "info": {
+      "email": {
+        "label": "Email Us",
+        "sub": "24/7 Digital Support"
+      },
+      "phone": {
+        "label": "Call Us",
+        "sub": "Mon-Fri Support"
+      },
+      "location": {
+        "label": "Our Studio",
+        "sub": "Kigali & Remote"
+      }
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "options": {
+        "new": "New Project Inquiry",
+        "legal": "Legal/Contract Inquiry",
+        "support": "General Support"
+      },
+      "message": "Project Details",
+      "placeholder": "Tell us about your masterpiece...",
+      "submit": "Send Message",
+      "success": {
+        "title": "Message Sent",
+        "message": "Thank you for reaching out. Our elite team will review your inquiry and respond within 24 hours.",
+        "button": "Send Another"
+      }
+    },
+    "personalInfo": "Personal Information",
     "projectScope": "Project Scope",
     "details": "Details",
     "fullName": "Full Name",
     "phoneNumber": "Phone Number",
     "email": "Email Address",
-    "projectType": "Project Type",
-    "objective": "Primary Project Objective",
-    "projectDetails": "Project Details",
-    "srs": "SRS Document (Optional)",
-    "timeline": "Desired Timeline (Optional)",
-    "back": "Back",
-    "continue": "Continue",
-    "submit": "Submit Request",
-    "successTitle": "Request Received",
-    "successMessage": "Thank you for reaching out. I've received your project details and will be in touch within 24 hours to discuss the next steps.",
-    "sendAnother": "Send Another Request"
+    "continue": "Continue"
   },
   "Footer": {
     "quickLinks": "Quick Links",
@@ -157,7 +233,8 @@
       "projects": "Projects",
       "analytics": "Analytics",
       "messages": "Messages",
-      "settings": "Settings"
+      "settings": "Settings",
+      "contract": "Contract"
     },
     "notifTitle": "Notifications",
     "readAll": "Read All",
@@ -167,9 +244,18 @@
     "premiumClient": "Premium Client",
     "signOut": "Sign Out",
     "notif": {
-      "milestone": { "title": "Milestone Completed", "msg": "Homepage Design has been approved." },
-      "message": { "title": "New Message", "msg": "Shalom sent you a project update." },
-      "invoice": { "title": "Invoice Paid", "msg": "Payment for Phase 1 was received." }
+      "milestone": {
+        "title": "Milestone Completed",
+        "msg": "Homepage Design has been approved."
+      },
+      "message": {
+        "title": "New Message",
+        "msg": "Shalom sent you a project update."
+      },
+      "invoice": {
+        "title": "Invoice Paid",
+        "msg": "Payment for Phase 1 was received."
+      }
     }
   },
   "DashboardOverview": {
@@ -185,5 +271,100 @@
     "recentActivity": "Recent Activity",
     "activityDetail": "Activity Detail",
     "viewProject": "View Full Project"
+  },
+  "DashboardContract": {
+    "title": "Contract Management",
+    "subtitle": "Review, sign, and manage your project agreements.",
+    "downloadBtn": "Download PDF",
+    "uploadBtn": "Upload Signed",
+    "statusTitle": "Agreement Status",
+    "currentStatus": "Current Phase",
+    "statusPending": "Awaiting Signature",
+    "statusSigned": "Legally Active",
+    "details": {
+      "type": "Contract Type",
+      "id": "Agreement ID",
+      "date": "Date Created",
+      "value": "Project Value"
+    },
+    "legalNoticeTitle": "Secure Agreement",
+    "legalNoticeText": "This document is protected by advanced encryption. All modifications are logged and audited to ensure legal compliance.",
+    "templateHeader": "Standard Development Agreement",
+    "contractTitle": "MASTER SERVICES AGREEMENT",
+    "sections": {
+      "intro": {
+        "title": "1. PARTIES",
+        "content": "This agreement is entered into between Shalom Developer (the 'Service Provider') and the Client as specified in the Dashboard profile."
+      },
+      "scope": {
+        "title": "2. SCOPE OF WORK",
+        "content": "The Service Provider agrees to deliver the following elite digital assets within the agreed timeline:",
+        "items": [
+          "Custom UI/UX Design & Prototyping",
+          "Full Stack Backend Architecture",
+          "Mobile Responsive Performance",
+          "6-Month Performance Audit & Support"
+        ]
+      },
+      "payment": {
+        "title": "3. PAYMENT TERMS",
+        "content": "Payment is due upon the first presentation of project deliverables. Equity options are available as defined in the primary contract addendum."
+      }
+    },
+    "pending": "Awaiting Signature"
+  },
+  "Privacy": {
+    "badge": "Trust & Security",
+    "title": "Privacy Policy",
+    "description": "Your privacy is paramount. Discover how we protect your data and project integrity throughout our collaboration.",
+    "sections": {
+      "data": {
+        "title": "Data Protection",
+        "content1": "We take the security of your project data and personal information seriously. All communication and project assets shared during the contract period are handled with strict confidentiality.",
+        "content2": "We do not share your project details, intellectual property, or personal contact information with third parties without your explicit written consent."
+      },
+      "transparency": {
+        "title": "Project Transparency",
+        "content1": "As part of our commitment to quality, we conduct regular audits of projects we develop during the first 6 months. This is to ensure long-term stability and security standards are maintained.",
+        "content2": "You have full visibility into the development process through our client dashboard, where you can monitor progress and access project milestones."
+      },
+      "contract": {
+        "title": "Contractual Privacy",
+        "content1": "Our signed contracts include comprehensive Non-Disclosure Agreement (NDA) clauses to protect your business interests. This extends to all code, designs, and strategic advice provided during the term of the agreement."
+      }
+    },
+    "footer": {
+      "question": "Have questions about our policy?",
+      "lastUpdated": "Last updated",
+      "contactLegal": "Contact Legal"
+    }
+  },
+  "Terms": {
+    "badge": "Legal Agreement",
+    "title": "Terms & Conditions",
+    "description": "Clarity and commitment are the foundations of elite partnership. These terms outline our professional service agreement.",
+    "sections": {
+      "engagement": {
+        "title": "1. Project Engagement",
+        "content1": "All projects commence with a formal signed contract. This document defines the project scope, detailed specifications, and an allocated time agreement for delivery.",
+        "content2": "We commit to delivering the initial project template within 5 business days from the contract signing date, allowing for early feedback and iterative development."
+      },
+      "payment": {
+        "title": "2. Payment & Equity Options",
+        "content1": "Payment is due upon the first presentation of the project deliverables. This ensures that the client is satisfied with the direction and foundation of the build.",
+        "content2": "In cases where liquid capital is not immediate, we offer a Strategic Equity Option. Clients may choose to grant shares/equity in the project as a form of payment, subject to a separate valuation and partnership agreement."
+      },
+      "maintenance": {
+        "title": "3. Post-Launch Maintenance",
+        "content1": "We provide 6 months of complimentary maintenance for every project we build. This includes critical bug fixes, performance monitoring, and regular system audits to ensure continued excellence."
+      },
+      "hosting": {
+        "title": "4. Hosting Infrastructure",
+        "content1": "Clients have the absolute freedom to choose their hosting provider. We offer premium managed hosting services for an additional fee, or we can assist in deploying the project to the client's own infrastructure."
+      }
+    },
+    "footer": {
+      "agreement": "By engaging in our services, you agree to the above terms. These terms are governed by the specific project contract signed at commencement."
+    }
   }
 }

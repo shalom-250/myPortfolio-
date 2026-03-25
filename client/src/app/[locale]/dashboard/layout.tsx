@@ -5,11 +5,18 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { LayoutDashboard, FileText, MessageSquare, Settings, LogOut, Menu, X, Bell, Check, Trash2, ArrowUpRight, BarChart3 } from "lucide-react";
+import { 
+    LayoutDashboard, FileText, MessageSquare, Settings, LogOut, 
+    Menu, X, Bell, Check, Trash2, ArrowUpRight, BarChart3,
+    ChevronLeft, ChevronRight, Globe
+} from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     const t = useTranslations("DashboardLayout");
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState(false);
     const [notifications, setNotifications] = useState([
         { id: 1, title: t("notif.milestone.title"), message: t("notif.milestone.msg"), time: "2m ago", read: false },
@@ -31,6 +38,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const navItems = [
         { name: t("nav.overview"), href: "/dashboard", icon: LayoutDashboard },
         { name: t("nav.projects"), href: "/dashboard/projects", icon: FileText },
+        { name: t("nav.contract"), href: "/dashboard/contract", icon: FileText },
         { name: t("nav.analytics"), href: "/dashboard/analytics", icon: BarChart3 },
         { name: t("nav.messages"), href: "/dashboard/messages", icon: MessageSquare },
         { name: t("nav.settings"), href: "/dashboard/settings", icon: Settings },
@@ -48,19 +56,29 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
             {/* Sidebar */}
             <aside
-                className={`fixed top-0 left-0 h-full w-64 bg-secondary/30 backdrop-blur-xl border-r border-border z-50 transform transition-transform duration-300 ease-in-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-                    }`}
+                className={`fixed top-0 left-0 h-full bg-secondary/30 backdrop-blur-xl border-r border-border z-50 transform transition-all duration-300 ease-in-out ${
+                    sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+                } ${isCollapsed ? "w-20" : "w-64"}`}
             >
                 <div className="h-20 flex items-center justify-between px-6 border-b border-white/5 dark:border-white/5 border-black/5">
                     <Link href="/" className="flex items-center">
                         <Image src="/logo.png" alt="Shalom Developer" width={36} height={36} className="rounded-lg shadow-md" />
+                        {!isCollapsed && (
+                            <motion.span 
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="ml-3 font-heading font-black text-xl italic tracking-tighter"
+                            >
+                                SHALOM
+                            </motion.span>
+                        )}
                     </Link>
                     <button 
                         suppressHydrationWarning
-                        className="lg:hidden text-foreground hover:text-accent-red" 
-                        onClick={() => setSidebarOpen(false)}
+                        className="text-muted hover:text-accent-red transition-colors" 
+                        onClick={() => isCollapsed ? setIsCollapsed(false) : setIsCollapsed(true)}
                     >
-                        <X size={20} />
+                        {isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
                     </button>
                 </div>
 
@@ -71,13 +89,22 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className={`group relative flex items-center space-x-3 px-4 py-3 rounded-xl transition-all ${isActive
+                                className={`group relative flex items-center ${isCollapsed ? "justify-center" : "space-x-3 px-4"} py-3 rounded-xl transition-all ${isActive
                                     ? "bg-accent-red/10 text-accent-red"
                                     : "text-muted hover:bg-black/5 dark:hover:bg-white/5 hover:text-foreground"
                                     }`}
+                                title={isCollapsed ? item.name : ""}
                             >
                                 <item.icon size={20} className={isActive ? "text-accent-red" : "group-hover:text-white text-muted"} />
-                                <span className="font-medium text-sm">{item.name}</span>
+                                {!isCollapsed && (
+                                    <motion.span 
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        className="font-medium text-sm"
+                                    >
+                                        {item.name}
+                                    </motion.span>
+                                )}
                                 {isActive && (
                                     <motion.div
                                         layoutId="sidebar-active"
@@ -90,27 +117,33 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 </nav>
 
                 <div className="absolute bottom-0 w-full p-4 border-t border-white/5">
-                    <div className="flex items-center space-x-3 px-4 py-3 mb-2 bg-white/5 rounded-xl">
-                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-red to-red-600 flex items-center justify-center text-white font-bold shadow-lg">
+                    <div className={`flex items-center ${isCollapsed ? "justify-center" : "space-x-3 px-4"} py-3 mb-2 bg-white/5 rounded-xl`}>
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-red to-red-600 flex items-center justify-center text-white font-bold shadow-lg shrink-0">
                             JD
                         </div>
-                        <div>
-                            <p className="text-sm font-medium text-foreground">John Doe</p>
-                            <p className="text-xs text-accent-red">{t("premiumClient")}</p>
-                        </div>
+                        {!isCollapsed && (
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                            >
+                                <p className="text-sm font-medium text-foreground">John Doe</p>
+                                <p className="text-xs text-accent-red">{t("premiumClient")}</p>
+                            </motion.div>
+                        )}
                     </div>
                     <Link
                         href="/login"
-                        className="flex items-center justify-center space-x-2 w-full py-3 text-muted hover:text-red-500 hover:bg-red-500/10 rounded-xl transition-colors mt-2"
+                        className={`flex items-center justify-center ${isCollapsed ? "" : "space-x-2"} w-full py-3 text-muted hover:text-red-500 hover:bg-red-500/10 rounded-xl transition-colors mt-2`}
+                        title={isCollapsed ? t("signOut") : ""}
                     >
                         <LogOut size={16} />
-                        <span className="font-medium text-sm">{t("signOut")}</span>
+                        {!isCollapsed && <span className="font-medium text-sm">{t("signOut")}</span>}
                     </Link>
                 </div>
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 lg:ml-64 flex flex-col min-h-screen relative overflow-hidden">
+            <main className={`flex-1 flex flex-col min-h-screen relative overflow-hidden transition-all duration-300 ${isCollapsed ? "lg:ml-20" : "lg:ml-64"}`}>
                 {/* Top Header */}
                 <header className="h-20 border-b border-border flex items-center justify-between px-6 md:px-10 sticky top-0 bg-background/80 backdrop-blur-md z-30">
                     <div className="flex items-center">
@@ -121,12 +154,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         >
                             <Menu size={24} />
                         </button>
-                        <h2 className="text-lg font-medium text-foreground hidden sm:block">
+                        <h2 className="text-lg font-medium text-foreground hidden sm:block font-heading">
                             {navItems.find(item => item.href === pathname)?.name || t("dashboard")}
                         </h2>
                     </div>
 
-                    <div className="flex items-center space-x-4 relative">
+                    <div className="flex items-center space-x-6 relative">
+                        {/* Integrated Language Switcher */}
+                        <div className="hidden md:block">
+                            <LanguageSwitcher />
+                        </div>
                         <div className="relative">
                             <Link 
                                 href="/dashboard/messages"
@@ -227,8 +264,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 </header>
 
                 {/* Page Content */}
-                <div className="flex-1 p-6 md:p-10 overflow-y-auto">
-                    {children}
+                <div className="flex-1 p-6 md:p-10 relative">
+                    <SmoothScroll>
+                        {children}
+                    </SmoothScroll>
                 </div>
             </main>
         </div>

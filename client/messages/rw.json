@@ -1,12 +1,13 @@
 {
   "Navbar": {
-    "home": "Ahabanza",
-    "projects": "Imishinga",
+    "about": "Tuduherereye",
     "services": "Serivisi",
+    "projects": "Imishinga",
     "blog": "Amakuru",
-    "about": "Ibyerekeye",
+    "contact": "Twandikire",
+    "home": "Ahabanza",
     "portal": "Iwinjiriro",
-    "hireMe": "Mpuza Akazi",
+    "hireMe": "Tuhe Akazi",
     "themeMode": "Uburyo bugaragara",
     "clientPortal": "Iwinjiriro ry'Abakiriya",
     "language": "Ururimi"
@@ -36,34 +37,64 @@
     "requestQuote": "Saba Igiciro",
     "exploreAll": "Reba Serivisi Zose",
     "luxuryWeb": {
-        "title": "Gukora Imbuga za Lukisire",
-        "price": "Kuva kuri RFW 2,499,000",
-        "description": "Inararibonye z'ikoranabuhanga ziteguye neza ku bigo bikomeye.",
-        "features": ["Guhimba UI/UX k'umwihariko", "Gukoresha Animasiyo za Framer Motion", "Guteza imbere SEO", "Gukora PWA yihuta", "Guhuza na CMS"]
+      "title": "Gukora Imbuga za Lukisire",
+      "price": "Kuva kuri RFW 2,499,000",
+      "description": "Inararibonye z'ikoranabuhanga ziteguye neza ku bigo bikomeye.",
+      "features": [
+        "Guhimba UI/UX k'umwihariko",
+        "Gukoresha Animasiyo za Framer Motion",
+        "Guteza imbere SEO",
+        "Gukora PWA yihuta",
+        "Guhuza na CMS"
+      ]
     },
     "fullStack": {
-        "title": "Sisitemu Wagutse",
-        "price": "Kuva kuri RFW 5,999,000",
-        "description": "Ibiranga sisitemu z'ikoranabuhanga zikoze neza kugira ngo zaguke.",
-        "features": ["Ibyerekeye imbuga byose", "Ubwubatsi bw'inyuma k'umwihariko", "Gupanga imiterere y'ububiko", "Umutekano n'Iwinjiriro", "Guhuza n'uburyo bwo kwishyura"]
+      "title": "Sisitemu Wagutse",
+      "price": "Kuva kuri RFW 5,999,000",
+      "description": "Ibiranga sisitemu z'ikoranabuhanga zukoze neza kugira ngo zaguke.",
+      "features": [
+        "Ibyerekeye imbuga byose",
+        "Ubwubatsi bw'inyuma k'umwihariko",
+        "Gupanga imiterere y'ububiko",
+        "Umutekano n'Iwinjiriro",
+        "Guhuza n'uburyo bwo kwishyura"
+      ]
     },
     "mobileApps": {
-        "title": "Gukora Porogaramu za Ngendanwa",
-        "price": "Kuva kuri RFW 4,999,000",
-        "description": "Porogaramu za ngendanwa zifite imikorere yo hejuru.",
-        "features": ["React Native / Expo", "Gushyira kuri App Store", "Ibutsa (Push Notifications)", "Gukora adafite interineti", "Ibiranga imikorere y'ako kanya"]
+      "title": "Gukora Porogaramu za Ngendanwa",
+      "price": "Kuva kuri RFW 4,999,000",
+      "description": "Porogaramu za ngendanwa zifite imikorere yo hejuru.",
+      "features": [
+        "React Native / Expo",
+        "Gushyira kuri App Store",
+        "Ibutsa (Push Notifications)",
+        "Gukora adafite interineti",
+        "Ibiranga imikorere y'ako kanya"
+      ]
     },
     "maintenance": {
-        "title": "Gufata neza Sisitemu",
-        "price": "Kuva kuri RFW 999,000 / ukwezi",
-        "description": "Gukomeza gukurikirana no kunoza imikorere buri gihe.",
-        "features": ["Gukosora utubazo", "Kuzamura imikorere", "Igenzura ry'umutekano", "Gutunganya ububiko", "Gucunga ibikorwaremezo"]
+      "title": "Gufata neza Sisitemu",
+      "price": "Kuva kuri RFW 999,000 / ukwezi",
+      "description": "Gukomeza gukurikirana no kunoza imikorere buri gihe.",
+      "features": [
+        "Gukosora utubazo",
+        "Kuzamura imikorere",
+        "Igenzura ry'umutekano",
+        "Gutunganya ububiko",
+        "Gucunga ibikorwaremezo"
+      ]
     },
     "mentorship": {
-        "title": "Kwigisha Porogaramu",
-        "price": "Gahunda y'Umwihariko",
-        "description": "Vugutira akazi kawe umurego mufashijwe n'inzobere.",
-        "features": ["Node.js / NestJS yisumbuye", "React / Next.js k'ubuhanga", "Guhimba ubwubatsi bwa Sisitemu", "Gukora imiterere y'ububiko", "Uburyo bw'akazi k'umwuga (Git/CI/CD)"]
+      "title": "Kwigisha Porogaramu",
+      "price": "Gahunda y'Umwihariko",
+      "description": "Vugutira akazi kawe umurego mufashijwe n'inzobere.",
+      "features": [
+        "Node.js / NestJS yisumbuye",
+        "React / Next.js k'ubuhanga",
+        "Guhimba ubwubatsi bwa Sisitemu",
+        "Gukora imiterere y'ububiko",
+        "Uburyo bw'akazi k'umwuga (Git/CI/CD)"
+      ]
     }
   },
   "Projects": {
@@ -79,22 +110,42 @@
       "aura": {
         "title": "Aura E-Commerce Platform",
         "description": "Urubuga rwa lukisire rucururizwaho imyambaro rufite ibikoresho by'ako kanya n'uburyo bugezweho bwo kwishyura.",
-        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+        "tech": [
+          "Next.js",
+          "Tailwind",
+          "PostgreSQL",
+          "Stripe"
+        ]
       },
       "vanguard": {
         "title": "Vanguard Fitness App",
         "description": "Porogaramu ya ngendanwa ifasha mu gukurikirana imyitozo ngororangingo k'umuntu ku giti cye.",
-        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+        "tech": [
+          "React Native",
+          "NestJS",
+          "MongoDB",
+          "Redux"
+        ]
       },
       "nimbus": {
         "title": "Nimbus Cloud ERP",
         "description": "Sisitemu yo gucunga ibikoresho by'ikigo ifite ubwubatsi bw'imigabane n'uburyo bwo kugenzura uwinjira.",
-        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+        "tech": [
+          "React",
+          "Go",
+          "PostgreSQL",
+          "Docker"
+        ]
       },
       "luxe": {
         "title": "Luxe Real Estate",
         "description": "Urubuga ruhuza abagura n'abagurisha amazu rufite amakarita n'izindi miterere ishimishije.",
-        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+        "tech": [
+          "Vue.js",
+          "Laravel",
+          "MySQL",
+          "AWS S3"
+        ]
       }
     }
   },
@@ -121,15 +172,17 @@
     }
   },
   "Contact": {
-    "title": "Tangira",
-    "project": "Umushinga",
-    "description": "Witeguye gushyira mu mubiri iyerekwa ryawe? Cyuza Ifishi ikurikira hano usabe igiciro cyangwa gahunda yo kugisha inama.",
+    "title": {
+      "start": "Reka Dutangire",
+      "highlight": "Umushinga wawe w'Icyubahiro"
+    },
+    "description": "Witeguye gushyira mu bikorwa icyerekezo cyawe? Uzuza ifomu ikurikira kugira ngo usabe ibiciro cyangwa ushyireho gahunda yo kugisha inama.",
     "personalInfo": "Amakuru yawe",
-    "projectScope": "Imiterere y'Umushinga",
+    "projectScope": "Ibijanye n'umushinga",
     "details": "Ibisobanuro",
-    "fullName": "Amazina yose",
-    "phoneNumber": "Nimero ya Terefoni",
-    "email": "Imeyili",
+    "fullName": "Amazina Yose",
+    "phoneNumber": "Nomero ya Telefone",
+    "email": "Imeri",
     "projectType": "Ubwoko bw'Umushinga",
     "objective": "Intego y'ibanze y'umushinga",
     "projectDetails": "Ibisobanuro by'Umushinga",
@@ -143,7 +196,7 @@
     "sendAnother": "Ohereza ubundi busabe"
   },
   "Footer": {
-    "quickLinks": "Lye vuba",
+    "quickLinks": "Viungo bya vuba",
     "connect": "Twandikire",
     "description": "Wubaka Sisitemu zihamye kandi nziza bihebuje. Inararibonye mu mbuga za lukisire na porogaramu za ngendanwa zikozwe neza.",
     "allRights": "Uburenganzira bwose bwariwe.",
@@ -157,7 +210,8 @@
       "projects": "Imishinga",
       "analytics": "Igereranya",
       "messages": "Ubutumwa",
-      "settings": "Igenamiterere"
+      "settings": "Igenamiterere",
+      "contract": "Amasezerano"
     },
     "notifTitle": "Imenyesha",
     "readAll": "Soma byose",
@@ -167,9 +221,18 @@
     "premiumClient": "Umukiriya w'Icyubahiro",
     "signOut": "Sohoka",
     "notif": {
-      "milestone": { "title": "Intambwe yashojwe", "msg": "Igishushanyo cy'ahabanza cyaremejwe." },
-      "message": { "title": "Ubutumwa bushya", "msg": "Shalom yaguhaye amakuru mashya y'umushinga." },
-      "invoice": { "title": "Inyemezabwishyu", "msg": "Ubwishyu bw'icyiciro cya mbere bwakiriwe." }
+      "milestone": {
+        "title": "Intambwe yashojwe",
+        "msg": "Igishushanyo cy'ahabanza cyaremejwe."
+      },
+      "message": {
+        "title": "Ubutumwa bushya",
+        "msg": "Shalom yaguhaye amakuru mashya y'umushinga."
+      },
+      "invoice": {
+        "title": "Inyemezabwishyu",
+        "msg": "Ubwishyu bw'icyiciro cya mbere bwakiriwe."
+      }
     }
   },
   "DashboardOverview": {
@@ -185,5 +248,100 @@
     "recentActivity": "Iheruka gukorwa",
     "activityDetail": "Ibisobanuro by'igikorwa",
     "viewProject": "Reba Umushinga wose"
+  },
+  "DashboardContract": {
+    "title": "Gucunga Amasezerano",
+    "subtitle": "Suzuma, sinya, kandi ucunge amasezerano y'umushinga wawe.",
+    "downloadBtn": "Kuramo PDF",
+    "uploadBtn": "Ohereza iyasinye",
+    "statusTitle": "Imiterere y'Amasezerano",
+    "currentStatus": "Icyiciro tugezemo",
+    "statusPending": "Itegereje Gusinywa",
+    "statusSigned": "Irategeka mu Mategeko",
+    "details": {
+      "type": "Ubwoko bw'Amasezerano",
+      "id": "ID y'Amasezerano",
+      "date": "Igihe yakorewe",
+      "value": "Agaciro k'Umushinga"
+    },
+    "legalNoticeTitle": "Amasezerano Arinzwe",
+    "legalNoticeText": "Iyi nyandiko irinzwe n'uburyo buhanitse bwa encryption. Ibikozwe byose birandikwa kugira ngo hubahirizwe amategeko.",
+    "templateHeader": "Amasezerano Rusange y'Ububatsi",
+    "contractTitle": "AMASEZERANO Y'AKAZI K'UBUHANGA",
+    "sections": {
+      "intro": {
+        "title": "1. IMPANDE ZUMVIKANYE",
+        "content": "Aya masezerano yakozwe hagati ya Shalom Developer ('Uwubatsi') n'Umukiriya nk'uko bigaragara kuri konti ye."
+      },
+      "scope": {
+        "title": "2. INGANO Y'AKAZI",
+        "content": "Uwubatsi yemeye gutanga ibi bikoresho by'indashyikirwa mu gihe cyumvikanyweho:",
+        "items": [
+          "Guhimba UI/UX n'Icyitegererezo",
+          "Ubwubatsi bw'Inyuma (Full Stack)",
+          "Imikorere yo hejuru kuri Mobile",
+          "Igenzura n'Ubufasha mu gihe cy'amezi 6"
+        ]
+      },
+      "payment": {
+        "title": "3. UBURYO BWO KWISHYURA",
+        "content": "Ubwishyu bukorwa igihe habaye imurikwa rya mbere ry'ibyo umushinga ugomba gukora. Uburyo bwo kugira imigabane mu mushinga burahari nk'uko bigaragara mu mugereka w'amasezerano."
+      }
+    },
+    "pending": "Itegereje Gusinywa"
+  },
+  "Privacy": {
+    "badge": "Icyizere n'Umutekano",
+    "title": "Amategeko y'ibanga",
+    "description": "Ibanga ryawe naryo riri mu by'ibanze. Menya uko turinda amakuru yawe n'ubunyangamugabo bw'umushinga mu gihe cyose twafatanyije.",
+    "sections": {
+      "data": {
+        "title": "Kurinda Amakuru",
+        "content1": "Twitaho cyane ku mutekano w'amakuru y'umushinga wawe n'amakuru yawe bwite. Ibivugwa byose n'ibikoresho by'umushinga mu gihe cy'amasezerano bikoranwa ibanga rikomeye.",
+        "content2": "Ntabwo dusangira ibisobanuro by'umushinga wawe, ibarirwa ry'ubwenge, cyangwa amakuru yawe bwite n'abandi bantu batari mu masezerano tutabyumvikanyeho mu nyandiko."
+      },
+      "transparency": {
+        "title": "Umunyemugabo w'Umushinga",
+        "content1": "Nk'igice cy'ubwitange bwacu ku bwiza, dukora ubugenzuzi buhoraho bw'imishinga twakoze mu gihe cy'amezi 6 ya mbere. Ibi ni ukugira ngo hashingirwe ku kuramba no gukomeza kubahiriza urwego rw'umutekano.",
+        "content2": "Ufite ububasha bwo kureba ko umushinga uri kugenda neza binyuze ku iwinjiriro ry'abakiriya, aho ushobora kureba aho umushinga ugeze n'intambwe zishojwe."
+      },
+      "contract": {
+        "title": "Ibanga ry'Amasezerano",
+        "content1": "Amasezerano yacu asinywe arimo ingingo zikomeye zo kutamena ibanga (NDA) kugira ngo zirinde inyungu zawe z'ubucuruzi. Ibi bigera kuri kodi zose, ibishushanyo, n'inama z'uburyo bwo gukora byatanzwe mu gihe cy'amasezerano."
+      }
+    },
+    "footer": {
+      "question": "Ufite ikibazo ku bijanye n'ibanga?",
+      "lastUpdated": "Byavuguruwe iheruka",
+      "contactLegal": "Vugisha Ishami ry'Amategeko"
+    }
+  },
+  "Terms": {
+    "badge": "Amasezerano y'Amategeko",
+    "title": "Amategeko n'Amabwiriza",
+    "description": "Kugaragaza ibintu neza n'ubwitange nibyo shingiro ry'ubufatanye bw'icyubahiro. Aya amategeko agena uburyo dukora n'abakiriya bacu.",
+    "sections": {
+      "engagement": {
+        "title": "1. Gutangira Umushinga",
+        "content1": "Imishinga yose itangirana n'amasezerano yemewe asinywe. Iyi nyandiko igena ingano y'umushinga, ibisobanuro birambuye, n'amasezerano y'igihe cyagenwe cyo kuwushyira mu bikorwa.",
+        "content2": "Twiyemeje gutanga icyitegererezo cya mbere (template) cy'umushinga mu gihe cy'iminsi 5 y'akazi uhereye igihe amasezerano yasinyiwe, kugira ngo tubone ibitekerezo byawe hakiri kare."
+      },
+      "payment": {
+        "title": "2. Ubwishyu n'Ubusangi mu Mushinga",
+        "content1": "Ubwishyu bukorwa igihe habaye imurikwa rya mbere ry'ibyo umushinga ugomba gukora. Ibi ni ukugira ngo tumenye ko umukiriya anyuzwe n'icyerekezo n'ishingiro ry'ibiri gukorwa.",
+        "content2": "Mu gihe umukiriya adafite amafaranga ako kanya, dutanga uburyo bwo kugira imigabane mu mushinga (shares). Abakiriya bashobora guhitamo gutanga imigabane mu mushinga nk'uburyo bw'ubwishyu, hashingiwe ku gaciro k'umushinga n'amasezerano y'ubufatanye yihariye."
+      },
+      "maintenance": {
+        "title": "3. Kwitaho k'Umushinga nyuma yo kuwutanga",
+        "content1": "Dutanga amezi 6 yo kwitaho ku mushinga ku bw'ubuntu kuri buri mushinga twakoze. Ibi bikubiyemo gukosora amakosa akomeye, kugenzura imikorere, n'ubugenzuzi buhoraho bwa sisitemu kugira ngo ikomeze gukora neza cyane."
+      },
+      "hosting": {
+        "title": "4. Ahantu Umushinga uba (Hosting)",
+        "content1": "Abakiriya bafite uburenganzira bwuzuye bwo kwihitiramo aho umushinga wabo uzaba. Dutanga serivisi z'icyubahiro zo kubibafasha ku kiguzi cyiyongereyeho, cyangwa dushobora kubafasha kuwushyira aho mwihitiyemo."
+      }
+    },
+    "footer": {
+      "agreement": "Mu gukoresha serivisi zacu, wemera amategeko yavuzwe haruguru. Aya amategeko agengwa n'amasezerano yihariye y'umushinga yasinywe igihe watangiraga."
+    }
   }
 }

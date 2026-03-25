@@ -1,10 +1,11 @@
 {
   "Navbar": {
-    "home": "首页",
-    "projects": "项目",
+    "about": "关于我",
     "services": "服务",
+    "projects": "项目",
     "blog": "博客",
-    "about": "关于",
+    "contact": "联系我们",
+    "home": "首页",
     "portal": "门户",
     "hireMe": "雇佣我",
     "themeMode": "主题模式",
@@ -14,14 +15,14 @@
   "Hero": {
     "title1": "全栈开发人员",
     "title2": "移动专家",
-    "subtitle": "以精准和优雅构建可扩展的系统。为高性能而设计的豪华网页和移动体验。",
+    "subtitle": "以精确和优雅构建可扩展的系统。专为性能打造的高级网络和移动体验。",
     "hireMe": "雇佣我",
     "viewProjects": "查看项目"
   },
   "About": {
     "title": "关于",
     "me": "我",
-    "description": "我是一名致力于构建优质数字体验的全栈开发人员。我填补了复杂工程与优雅设计之间的空白。",
+    "description": "我是一名致力于创造优质数字体验的全栈开发人员。我在复杂的工程和优雅的设计之间搭建桥梁。",
     "frontend": "前端",
     "backend": "后端",
     "mobile": "移动端",
@@ -30,71 +31,121 @@
   "Services": {
     "title": "服务",
     "elite": "精英",
-    "description": "为高端客户量身定制的全面解决方案。从豪华着陆页到企业级平台。",
+    "description": "为高端客户量身定制的全面解决方案。从豪华登陆页面到企业级平台。",
     "popular": "最受欢迎",
     "learnMore": "了解更多",
-    "requestQuote": "索取报价",
+    "requestQuote": "申请报价",
     "exploreAll": "探索所有服务",
     "luxuryWeb": {
-        "title": "豪华网页设计",
-        "price": "起价 RFW 2,499,000",
-        "description": "为顶级品牌打造的精美数字体验。",
-        "features": ["自定义 UI/UX 设计", "Framer Motion 动画", "SEO 优化", "响应式 PWA", "CMS 集成"]
+      "title": "豪华网页设计",
+      "price": "RFW 2,499,000 起",
+      "description": "为高端品牌打造的精致数字体验。",
+      "features": [
+        "定制 UI/UX 设计",
+        "Framer Motion 动画",
+        "SEO 优化",
+        "响应式 PWA",
+        "CMS 集成"
+      ]
     },
     "fullStack": {
-        "title": "全栈平台",
-        "price": "起价 RFW 5,999,000",
-        "description": "为可扩展性而构建的综合数字生态系统。",
-        "features": ["网页设计中的所有内容", "自定义后端架构", "数据库策略", "身份验证与安全", "支付网关集成"]
+      "title": "全栈平台开发",
+      "price": "RFW 5,999,000 起",
+      "description": "专为增长设计的完整数字系统。",
+      "features": [
+        "包含网页设计所有内容",
+        "量身定制的后端架构",
+        "数据库策略",
+        "身份验证与安全",
+        "支付网关集成"
+      ]
     },
     "mobileApps": {
-        "title": "移动应用开发",
-        "price": "起价 RFW 4,999,000",
-        "description": "高性能的原生和跨平台移动应用。",
-        "features": ["React Native / Expo", "App Store 部署", "推送通知", "离线同步", "实时功能"]
+      "title": "移动应用开发",
+      "price": "RFW 4,999,000 起",
+      "description": "高性能的原生和跨平台移动应用。",
+      "features": [
+        "React Native / Expo",
+        "商店发布",
+        "推送通知",
+        "离线同步",
+        "实时功能"
+      ]
     },
     "maintenance": {
-        "title": "精英系统维护",
-        "price": "起价 RFW 999,000 / 月",
-        "description": "持续优化和主动监控。",
-        "features": ["错误修复与稳定性", "性能优化", "安全审核", "数据库调优", "基础设施管理"]
+      "title": "精英系统维护",
+      "price": "RFW 999,000 / 月起",
+      "description": "持续优化和主动监控。",
+      "features": [
+        "错误修复与稳定性",
+        "性能优化",
+        "安全审核",
+        "数据库调优",
+        "基础设施管理"
+      ]
     },
     "mentorship": {
-        "title": "专业编程指导",
-        "price": "定制课程",
-        "description": "通过一对一的专家指导加速您的职业生涯。",
-        "features": ["高级 Node.js / NestJS", "精通 React / Next.js", "系统架构设计", "数据库建模", "专业工作流 (Git/CI/CD)"]
+      "title": "专业编程指导",
+      "price": "定制课程",
+      "description": "在专家指导下加速您的职业生涯。",
+      "features": [
+        "高级 Node.js / NestJS",
+        "熟练掌握 React / Next.js",
+        "系统架构设计",
+        "数据建模",
+        "专业工作流 (Git/CI/CD)"
+      ]
     }
   },
   "Projects": {
     "title": "作品",
     "selected": "精选",
-    "description": "我策划的一系列数字体验作品。将复杂问题转化为优雅、可扩展的解决方案。",
+    "description": "我构建的数字体验集合。将复杂的问题转化为优雅、可扩展的解决方案。",
     "all": "全部",
     "webApps": "网页应用",
     "mobileApps": "移动应用",
-    "systems": "系统架构",
+    "systems": "系统",
     "viewAll": "查看所有项目",
     "items": {
       "aura": {
         "title": "Aura 电子商务平台",
-        "description": "具有实时库存和现代结账体验的豪华时尚电子商务平台。",
-        "tech": ["Next.js", "Tailwind", "PostgreSQL", "Stripe"]
+        "description": "具有实时库存和现代化结账体验的豪华时尚电商平台。",
+        "tech": [
+          "Next.js",
+          "Tailwind",
+          "PostgreSQL",
+          "Stripe"
+        ]
       },
       "vanguard": {
         "title": "Vanguard 健身应用",
-        "description": "用于个性化锻炼跟踪和分析的跨平台移动应用。",
-        "tech": ["React Native", "NestJS", "MongoDB", "Redux"]
+        "description": "用于个性化锻炼跟踪和分析的跨平台移动应用程序。",
+        "tech": [
+          "React Native",
+          "NestJS",
+          "MongoDB",
+          "Redux"
+        ]
       },
       "nimbus": {
         "title": "Nimbus 云 ERP",
-        "description": "具有模块化架构和基于角色的访问的企业资源计划系统。",
-        "tech": ["React", "Go", "PostgreSQL", "Docker"]
+        "description": "具有模块化架构和基于角色的访问权限的企业资源规划系统。",
+        "tech": [
+          "React",
+          "Go",
+          "PostgreSQL",
+          "Docker"
+        ]
       },
       "luxe": {
         "title": "Luxe 房地产",
-        "description": "具有交互式地图和动画过渡的高端房地产列表平台。",
-        "tech": ["Vue.js", "Laravel", "MySQL", "AWS S3"]
+        "description": "具有互动地图和动画效果的高端房地产上市平台。",
+        "tech": [
+          "Vue.js",
+          "Laravel",
+          "MySQL",
+          "AWS S3"
+        ]
       }
     }
   },
@@ -104,49 +155,51 @@
     "description": "听听我有幸合作过的创新者和领导者的评价。",
     "items": {
       "sarah": {
-        "name": "莎拉·约翰逊",
+        "name": "Sarah Johnson",
         "role": "TechFlow 首席执行官",
-        "content": "与 Shalom 合作彻底改变了我们的平台。对细节的关注和卓越的工程设计是无与伦比的。"
+        "content": "与 Shalom 合作是我们平台的转折点。对细节的关注和卓越的工程设计是无与伦比的。"
       },
       "david": {
-        "name": "大卫·陈",
+        "name": "David Chen",
         "role": "Zenith AI 创始人",
-        "content": "他们为我们的网络形象带来的奢华审美立即提高了我们的转化率。真正的高端开发人员。"
+        "content": "他为我们的网络形象带来的豪华美感立即提高了我们的转化率。真正的顶尖开发人员。"
       },
       "aisha": {
-        "name": "阿伊莎·卡马利",
+        "name": "Aisha Kamali",
         "role": "Nile Pay 产品经理",
-        "content": "非常专业，并提前交付了一个复杂的金融科技平台。代码质量非常出色。"
+        "content": "非常专业，提前交付了一个复杂的金融科技平台。代码质量非常出色。"
       }
     }
   },
   "Contact": {
-    "title": "启动",
-    "project": "项目",
-    "description": "准备好将您的愿景变为现实了吗？填写下面的表格以索取报价或安排咨询。",
+    "title": {
+      "start": "开始您的",
+      "highlight": "精英项目"
+    },
+    "description": "准备好实现您的愿景了吗？填写下方表格申请报价或预定咨询。",
     "personalInfo": "个人信息",
     "projectScope": "项目范围",
-    "details": "详细信息",
+    "details": "详情",
     "fullName": "全名",
     "phoneNumber": "电话号码",
-    "email": "电子邮件地址",
+    "email": "电子邮件",
     "projectType": "项目类型",
-    "objective": "主要项目目标",
-    "projectDetails": "项目详情",
-    "srs": "SRS 文档（可选）",
-    "timeline": "期望时间表（可选）",
+    "objective": "核心目标",
+    "projectDetails": "项目细节",
+    "srs": "SRS 文件 (可选)",
+    "timeline": "期望时间线 (可选)",
     "back": "返回",
     "continue": "继续",
     "submit": "提交申请",
     "successTitle": "申请已收到",
-    "successMessage": "感谢您的联系。我已收到您的项目详情，并将在 24 小时内与您联系，讨论后续步骤。",
+    "successMessage": "感谢您的联系。我们收到了您的项目详情，并将在 24 小时内回复您，讨论后续步骤。",
     "sendAnother": "发送另一个申请"
   },
   "Footer": {
     "quickLinks": "快速链接",
-    "connect": "联系方式",
-    "description": "以精准和优雅构建可扩展的系统。为高性能而设计的豪华网页和移动体验。",
-    "allRights": "版权所有。",
+    "connect": "联系",
+    "description": "以精确和优雅构建可扩展的系统。专为表现打造的高级网络和移动体验。",
+    "allRights": "保留所有权利。",
     "privacy": "隐私政策",
     "terms": "服务条款"
   },
@@ -157,33 +210,139 @@
       "projects": "项目",
       "analytics": "分析",
       "messages": "消息",
-      "settings": "设置"
+      "settings": "设置",
+      "contract": "合同"
     },
     "notifTitle": "通知",
-    "readAll": "全部标记为已读",
-    "clearAll": "清除全部",
+    "readAll": "全部标记已读",
+    "clearAll": "全部清除",
     "viewAll": "查看全部",
     "backToPortfolio": "返回作品集",
     "premiumClient": "高级客户",
-    "signOut": "退出登录",
+    "signOut": "登出",
     "notif": {
-      "milestone": { "title": "里程碑已完成", "msg": "首页设计已通过审核。" },
-      "message": { "title": "新消息", "msg": "Shalom 向您发送了项目更新。" },
-      "invoice": { "title": "发票已支付", "msg": "已收到第一阶段的付款。" }
+      "milestone": {
+        "title": "里程碑已完成",
+        "msg": "首页设计已获得批准。"
+      },
+      "message": {
+        "title": "新消息",
+        "msg": "Shalom 向您发送了项目更新。"
+      },
+      "invoice": {
+        "title": "账单已支付",
+        "msg": "第一阶段的款项已收到。"
+      }
     }
   },
   "DashboardOverview": {
     "welcome": "欢迎回来",
-    "subtitle": "这是您今天项目的进展情况。",
+    "subtitle": "以下是您项目今天的进展。",
     "stats": {
-      "activeProjects": "进行中的项目",
-      "pendingTasks": "待处理任务",
-      "completedMilestones": "已完成的里程碑",
-      "allTime": "总计"
+      "activeProjects": "进行中项目",
+      "pendingTasks": "待办任务",
+      "completedMilestones": "已完里程碑",
+      "allTime": "总时长"
     },
     "viewDetails": "查看详情",
     "recentActivity": "最近活动",
     "activityDetail": "活动详情",
     "viewProject": "查看完整项目"
+  },
+  "DashboardContract": {
+    "title": "合同管理",
+    "subtitle": "查看、签署并管理您的项目协议。",
+    "downloadBtn": "下载 PDF",
+    "uploadBtn": "上传已签署",
+    "statusTitle": "协议状态",
+    "currentStatus": "当前阶段",
+    "statusPending": "等待签署",
+    "statusSigned": "法律生效",
+    "details": {
+      "type": "合同类型",
+      "id": "协议 ID",
+      "date": "创建日期",
+      "value": "项目价值"
+    },
+    "legalNoticeTitle": "安全协议",
+    "legalNoticeText": "此文档受高级加密保护。所有修改均会被记录和审计，以确保法律合规。",
+    "templateHeader": "标准开发协议",
+    "contractTitle": "主服务协议",
+    "sections": {
+      "intro": {
+        "title": "1. 双方",
+        "content": "本协议由 Shalom Developer（“服务提供商”）与仪表板资料中所述的客户签署。"
+      },
+      "scope": {
+        "title": "2. 工作范围",
+        "content": "服务提供商同意在约定的时间表内交付以下高端数字资产：",
+        "items": [
+          "定制 UI/UX 设计与原型制作",
+          "全栈后端架构构建",
+          "移动端响应式性能优化",
+          "6 个月的性能审核与支持"
+        ]
+      },
+      "payment": {
+        "title": "3. 付款条款",
+        "content": "付款应在项目成果首次展示时支付。股权选项按主合同附录规定提供。"
+      }
+    },
+    "pending": "等待签署"
+  },
+  "Privacy": {
+    "badge": "信任与安全",
+    "title": "隐私政策",
+    "description": "您的隐私至关重要。了解我们在合作期间如何保护您的数据和项目完整性。",
+    "sections": {
+      "data": {
+        "title": "数据保护",
+        "content1": "我们非常重视您的项目数据和个人信息的安全。在合同期间共享的所有沟通和项目资产都将受到严格保密。",
+        "content2": "未经您明确的书面同意，我们不会向第三方共享您的项目详情、知识产权或个人联系信息。"
+      },
+      "transparency": {
+        "title": "项目透明度",
+        "content1": "作为我们对质量承诺的一部分，我们会对前 6 个月内开发的项目进行定期审计。这是为了确保长期稳定性和合规的安全标准。",
+        "content2": "通过客户仪表板，您可以完全了解开发过程，监控进度并访问项目里程碑。"
+      },
+      "contract": {
+        "title": "合同保密",
+        "content1": "我们签署的合同包括全面的保密协议 (NDA) 条款，以保护您的商业利益。这延伸到协议期间提供的所有代码、设计和战略建议。"
+      }
+    },
+    "footer": {
+      "question": "对我们的政策有疑问？",
+      "lastUpdated": "最近更新",
+      "contactLegal": "联系法律部门"
+    }
+  },
+  "Terms": {
+    "badge": "法律协议",
+    "title": "服务条款",
+    "description": "清晰和承诺是卓越合作伙伴关系的基石。这些条款概述了我们的专业服务协议。",
+    "sections": {
+      "engagement": {
+        "title": "1. 项目参与",
+        "content1": "所有项目均从正式签署的合同开始。此文档定义了项目范围、详细规范和交付的分配时间协议。",
+        "content2": "我们承诺在合同签署之日起 5 个工作日内交付初步项目模板，以便进行早期反馈和持续开发。"
+      },
+      "payment": {
+        "title": "2. 付款与股权选项",
+        "content1": "付款应在项目成果首次展示时支付。这确保了客户对构建方向和基础感到满意。",
+        "content2": "在即时现金资本不可用的情况下，我们提供战略性的股权选项。客户可以选择授予项目股份/股权作为付款方式，但这取决于单独的评估和合伙协议。"
+      },
+      "maintenance": {
+        "title": "3. 发布后维护",
+        "content1": "我们为构建的每个项目提供 6 个月的免费维护。这包括关键错误修复、性能监控和定期系统审计，以确保持续卓越。",
+        "content2": ""
+      },
+      "hosting": {
+        "title": "4. 托管基础设施",
+        "content1": "客户完全自由选择其托管提供商。我们提供额外收费的高级管理托管服务，或者我们可以协助在客户自己的基础设施上部署项目。"
+      }
+    },
+    "footer": {
+      "agreement": "通过使用我们的服务，您同意上述条款。这些条款受初始签署的特定项目合同管辖。"
+    }
   }
 }

@@ -24,9 +24,10 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-semibold mb-6">{t("quickLinks")}</h4>
                         <ul className="space-y-3">
-                            <li><Link href="#about" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("about")}</Link></li>
-                            <li><Link href="#projects" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("projects")}</Link></li>
-                            <li><Link href="#services" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("services")}</Link></li>
+                            <li><Link href="/" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("home")}</Link></li>
+                            <li><Link href="/projects" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("projects")}</Link></li>
+                            <li><Link href="/services" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("services")}</Link></li>
+                            <li><Link href="/contact" className="text-muted text-sm hover:text-accent-red transition-colors">{navT("contact")}</Link></li>
                         </ul>
                     </div>
                     <div>
