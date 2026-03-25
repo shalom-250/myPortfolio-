@@ -27,15 +27,15 @@ export default function SmoothScroll({
   const { scrollY, scrollYProgress } = useScroll();
   
   const smoothY = useSpring(scrollY, {
-    damping: 15,
-    stiffness: 100,
+    damping: 25, /* Tighter damping */
+    stiffness: 200, /* Higher stiffness for speed */
     mass: 0.1,
     restDelta: 0.001
   });
 
   const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
+    stiffness: 200,
+    damping: 35,
     restDelta: 0.001
   });
 

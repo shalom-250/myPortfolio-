@@ -25,9 +25,9 @@ export default function ContractPage() {
             {/* Header Area with Glassmorphic Floating Style */}
             <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-8">
                 <motion.div
-                    initial={{ opacity: 0, x: -30 }}
+                    initial={{ opacity: 0, x: -15 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
                 >
                     <div className="flex items-center space-x-3 mb-4">
                         <div className="h-px w-8 bg-accent-red"></div>
@@ -42,20 +42,21 @@ export default function ContractPage() {
                 </motion.div>
 
                 <motion.div 
-                    initial={{ opacity: 0, scale: 0.9 }}
+                    initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3 }}
                     className="flex flex-wrap items-center gap-4"
                 >
-                    <button className="group flex items-center space-x-3 px-8 py-4 bg-white/5 hover:bg-white/10 rounded-2xl font-black text-xs uppercase tracking-widest transition-all border border-white/5 hover:border-white/20 backdrop-blur-md">
+                    <button className="group flex items-center space-x-3 px-8 py-4 bg-secondary/10 hover:bg-secondary/20 dark:bg-white/5 dark:hover:bg-white/10 rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-sm">
                         <Download size={18} className="text-accent-red group-hover:scale-125 transition-transform" />
                         <span>{t("downloadBtn")}</span>
                     </button>
-                    <button className="group flex items-center space-x-3 px-8 py-4 bg-accent-red hover:bg-red-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-2xl shadow-red-500/30 border border-white/20">
+                    <button className="group flex items-center space-x-3 px-8 py-4 bg-accent-red hover:bg-red-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest transition-all shadow-lg shadow-red-500/20">
                         <Upload size={18} className="group-hover:scale-125 transition-transform" />
                         <span>{t("uploadBtn")}</span>
                     </button>
-                    <div className="w-px h-10 bg-white/10 mx-2 hidden md:block"></div>
-                    <button className="p-4 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/5 transition-colors text-muted hover:text-white">
+                    <div className="w-px h-10 bg-black/5 dark:bg-white/10 mx-2 hidden md:block"></div>
+                    <button className="p-4 bg-secondary/10 hover:bg-secondary/20 dark:bg-white/5 dark:hover:bg-white/10 rounded-2xl transition-colors text-muted hover:text-foreground">
                         <Printer size={18} />
                     </button>
                 </motion.div>
@@ -66,45 +67,45 @@ export default function ContractPage() {
                 <div className="lg:col-span-4 space-y-8">
                     {/* Status & Insight Card */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.3 }}
                         className="relative group overflow-hidden"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-accent-red/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        <div className="relative bg-secondary/20 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-10 shadow-2xl">
+                        <div className="absolute inset-0 bg-gradient-to-br from-accent-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div className="relative bg-white dark:bg-secondary/20 backdrop-blur-2xl rounded-[2.5rem] p-10 shadow-xl shadow-black/[0.03] dark:shadow-none translate-y-0 group-hover:-translate-y-1 transition-transform">
                             <div className="flex items-center justify-between mb-10">
-                                <h3 className="text-sm font-black uppercase tracking-[0.2em] text-white flex items-center italic">
+                                <h3 className="text-sm font-black uppercase tracking-[0.2em] text-foreground flex items-center italic">
                                     <Clock size={16} className="mr-3 text-accent-red" />
                                     {t("statusTitle")}
                                 </h3>
                                 <div className="flex space-x-1">
-                                    {[1,2,3].map(i => <div key={i} className={`w-1 h-1 rounded-full ${i <= 2 ? 'bg-accent-red' : 'bg-white/20'}`}></div>)}
+                                    {[1,2,3].map(i => <div key={i} className={`w-1 h-1 rounded-full ${i <= 2 ? 'bg-accent-red' : 'bg-foreground/10'}`}></div>)}
                                 </div>
                             </div>
                             
-                            <div className="flex items-center mb-12 p-6 bg-white/5 rounded-3xl border border-white/5 relative overflow-hidden group/status">
-                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-accent-red/10 rounded-full blur-3xl group-hover/status:bg-accent-red/20 transition-colors"></div>
-                                <div className={`relative p-4 rounded-2xl mr-5 shadow-inner ${status === "pending" ? "bg-amber-500/20 text-amber-500" : "bg-green-500/20 text-green-500"}`}>
+                            <div className="flex items-center mb-12 p-6 bg-slate-50 dark:bg-white/5 rounded-3xl relative overflow-hidden group/status shadow-inner">
+                                <div className="absolute -right-4 -top-4 w-24 h-24 bg-accent-red/5 rounded-full blur-3xl group-hover/status:bg-accent-red/10 transition-colors"></div>
+                                <div className={`relative p-4 rounded-2xl mr-5 shadow-sm ${status === "pending" ? "bg-amber-500/10 text-amber-500" : "bg-green-500/10 text-green-500"}`}>
                                     {status === "pending" ? <AlertCircle size={32} /> : <CheckCircle2 size={32} />}
                                 </div>
                                 <div className="relative">
                                     <p className="text-[9px] font-black uppercase tracking-[0.2em] text-muted mb-1.5 opacity-60">{t("currentStatus")}</p>
-                                    <p className="text-2xl font-black font-heading tracking-tight italic flex items-center">
+                                    <p className="text-2xl font-black font-heading tracking-tight italic flex items-center text-foreground">
                                         {status === "pending" ? t("statusPending") : t("statusSigned")}
                                         <ChevronRight size={16} className="ml-2 text-accent-red opacity-0 group-hover/status:opacity-100 transition-opacity" />
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="space-y-2">
+                            <div className="space-y-1">
                                 {contractDetails.map((detail, i) => (
-                                    <div key={i} className="flex justify-between items-center p-4 hover:bg-white/5 rounded-2xl transition-all border border-transparent hover:border-white/5 group/detail">
+                                    <div key={i} className="flex justify-between items-center p-4 hover:bg-slate-50 dark:hover:bg-white/5 rounded-2xl transition-all group/detail">
                                         <div className="flex items-center">
                                             <detail.icon size={14} className="mr-3 text-muted group-hover/detail:text-accent-red transition-colors" />
-                                            <span className="text-xs font-bold text-muted group-hover/detail:text-white transition-colors">{detail.label}</span>
+                                            <span className="text-xs font-bold text-muted group-hover/detail:text-foreground transition-colors">{detail.label}</span>
                                         </div>
-                                        <span className="text-xs font-black text-white italic">{detail.value}</span>
+                                        <span className="text-xs font-black text-foreground italic">{detail.value}</span>
                                     </div>
                                 ))}
                             </div>
@@ -141,21 +142,21 @@ export default function ContractPage() {
                     className="lg:col-span-8 relative group"
                 >
                     {/* Viewer Controls Layer */}
-                    <div className="absolute top-8 right-8 z-40 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <button className="p-2.5 bg-white/10 hover:bg-accent-red rounded-xl backdrop-blur-xl text-white transition-all shadow-lg">
+                    <div className="absolute top-8 right-8 z-40 flex space-x-2">
+                        <button className="p-2.5 bg-background/50 dark:bg-white/10 hover:bg-accent-red rounded-xl backdrop-blur-xl text-foreground dark:text-white transition-all shadow-lg">
                             <Share2 size={16} />
                         </button>
-                        <button className="p-2.5 bg-white/10 hover:bg-accent-red rounded-xl backdrop-blur-xl text-white transition-all shadow-lg">
+                        <button className="p-2.5 bg-background/50 dark:bg-white/10 hover:bg-accent-red rounded-xl backdrop-blur-xl text-foreground dark:text-white transition-all shadow-lg">
                             <MoreVertical size={16} />
                         </button>
                     </div>
 
-                    <div className="bg-[#050505] border border-white/10 rounded-[3rem] overflow-hidden flex flex-col min-h-[900px] shadow-[0_40px_100px_rgba(0,0,0,0.8)] relative">
+                    <div className="bg-[#FAF9F6] dark:bg-[#050505] rounded-[3rem] overflow-hidden flex flex-col min-h-[900px] shadow-2xl relative">
                         {/* Decorative Texture Layer */}
                         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                         
                         {/* Status Bar */}
-                        <div className="relative p-10 border-b border-white/5 flex items-center justify-between bg-white/[0.02]">
+                        <div className="relative p-10 flex items-center justify-between bg-[#F1F5F9]/50 dark:bg-white/[0.02] shadow-sm">
                             <div className="flex items-center space-x-4">
                                 <div className="p-3 bg-accent-red/10 rounded-2xl text-accent-red shadow-inner">
                                     <FileText size={24} />
@@ -176,8 +177,8 @@ export default function ContractPage() {
                         </div>
 
                         {/* Document Content */}
-                        <div className="relative flex-1 p-12 md:p-20 overflow-y-auto scrollbar-hide bg-gradient-to-b from-transparent via-white/[0.01] to-white/[0.02]">
-                            <div className="max-w-3xl mx-auto space-y-16 py-12 text-base text-muted/70 leading-8 font-serif italic">
+                        <div className="relative flex-1 p-12 md:p-20 overflow-y-auto scrollbar-hide bg-white dark:bg-gradient-to-b dark:from-transparent dark:via-white/[0.01] dark:to-white/[0.02]">
+                            <div className="max-w-3xl mx-auto space-y-16 py-12 text-base text-slate-600 dark:text-muted/70 leading-8 font-serif italic">
                                 {/* Elegant Document Header */}
                                 <div className="text-center space-y-6 mb-24 relative">
                                     <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-40 h-px bg-gradient-to-r from-transparent via-accent-red to-transparent opacity-50"></div>

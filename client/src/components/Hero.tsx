@@ -6,9 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Code2 } from "lucide-react";
 
 const heroImages = [
-    "/images/xg.png",
     "/images/gh.png",
-    "/images/sa.png",
     "/images/tkv.png",
 ];
 

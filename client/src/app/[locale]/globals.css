@@ -16,27 +16,29 @@
 :root {
   --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-outfit: 'Outfit', system-ui, sans-serif;
-  --background: #ffffff;
-  --foreground: #0A0A0A;
-  --primary: #ffffff;
+  --background: #FFFFFF; /* Pure White for Sidebar/Header */
+  --foreground: #0F172A; /* Slate-900 */
+  --primary: #FFFFFF;
   --accent: #ED7014;
   --accent-red: #FF3131;
-  --secondary: #F8F8F8;
-  --muted: #666666;
-  --border: transparent;
+  --secondary: #F8FAFC; /* Very Light Slate for Sidebar */
+  --muted: #64748B;
+  --border: rgba(15, 23, 42, 0.05);
+  --main-content-bg: #F1F5F9; /* Cool Arctic Slate Content Background */
 }
 
 .dark {
   --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-outfit: 'Outfit', system-ui, sans-serif;
-  --background: #0A0A0A;
+  --background: #0A0A0A; /* Deep Black for Sidebar/Header */
   --foreground: #ffffff;
   --primary: #0A0A0A;
   --accent: #ED7014;
   --accent-red: #FF3131;
-  --secondary: #1F1F1F;
+  --secondary: #161616; /* Slightly lighter for structural elements */
   --muted: #A0A0A0;
   --border: transparent;
+  --main-content-bg: #0F1219; /* Midnight Slate Content Background */
 }
 
 body {

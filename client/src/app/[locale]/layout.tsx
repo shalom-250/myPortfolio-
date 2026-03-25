@@ -57,9 +57,7 @@ export default async function LocaleLayout(props: {
       <body className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col font-sans bg-background text-foreground selection:bg-accent-red/30 selection:text-white`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <SmoothScroll>
-              {props.children}
-            </SmoothScroll>
+            {props.children}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

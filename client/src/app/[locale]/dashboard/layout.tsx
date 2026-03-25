@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-    LayoutDashboard, FileText, MessageSquare, Settings, LogOut, 
+import {
+    LayoutDashboard, FileText, MessageSquare, Settings, LogOut,
     Menu, X, Bell, Check, Trash2, ArrowUpRight, BarChart3,
     ChevronLeft, ChevronRight, Globe
 } from "lucide-react";
@@ -18,6 +18,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
     const [notifications, setNotifications] = useState([
         { id: 1, title: t("notif.milestone.title"), message: t("notif.milestone.msg"), time: "2m ago", read: false },
         { id: 2, title: t("notif.message.title"), message: t("notif.message.msg"), time: "1h ago", read: false },
@@ -56,15 +62,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
             {/* Sidebar */}
             <aside
-                className={`fixed top-0 left-0 h-full bg-secondary/30 backdrop-blur-xl border-r border-border z-50 transform transition-all duration-300 ease-in-out ${
-                    sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-                } ${isCollapsed ? "w-20" : "w-64"}`}
+                className={`fixed top-0 left-0 h-full bg-background dark:bg-background backdrop-blur-xl shadow-2xl shadow-black/[0.05] dark:shadow-none z-50 transform transition-all duration-300 ease-in-out ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+                    } ${isCollapsed ? "w-20" : "w-64"}`}
             >
-                <div className="h-20 flex items-center justify-between px-6 border-b border-white/5 dark:border-white/5 border-black/5">
+                <div className="h-20 flex items-center justify-between px-6 border-b border-black/[0.03] dark:border-white/[0.03]">
                     <Link href="/" className="flex items-center">
                         <Image src="/logo.png" alt="Shalom Developer" width={36} height={36} className="rounded-lg shadow-md" />
                         {!isCollapsed && (
-                            <motion.span 
+                            <motion.span
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 className="ml-3 font-heading font-black text-xl italic tracking-tighter"
@@ -73,9 +78,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             </motion.span>
                         )}
                     </Link>
-                    <button 
+                    <button
                         suppressHydrationWarning
-                        className="text-muted hover:text-accent-red transition-colors" 
+                        className="text-muted hover:text-accent-red transition-colors"
                         onClick={() => isCollapsed ? setIsCollapsed(false) : setIsCollapsed(true)}
                     >
                         {isCollapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
@@ -97,7 +102,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             >
                                 <item.icon size={20} className={isActive ? "text-accent-red" : "group-hover:text-white text-muted"} />
                                 {!isCollapsed && (
-                                    <motion.span 
+                                    <motion.span
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         className="font-medium text-sm"
@@ -116,8 +121,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     })}
                 </nav>
 
-                <div className="absolute bottom-0 w-full p-4 border-t border-white/5">
-                    <div className={`flex items-center ${isCollapsed ? "justify-center" : "space-x-3 px-4"} py-3 mb-2 bg-white/5 rounded-xl`}>
+                <div className="absolute bottom-0 w-full p-4 border-t border-black/5 dark:border-white/5">
+                    <div className={`flex items-center ${isCollapsed ? "justify-center" : "space-x-3 px-4"} py-3 mb-2 bg-black/5 dark:bg-white/5 rounded-xl`}>
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-red to-red-600 flex items-center justify-center text-white font-bold shadow-lg shrink-0">
                             JD
                         </div>
@@ -127,13 +132,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 animate={{ opacity: 1 }}
                             >
                                 <p className="text-sm font-medium text-foreground">John Doe</p>
-                                <p className="text-xs text-accent-red">{t("premiumClient")}</p>
+                                <p className="text-xs text-accent-red font-bold">{t("premiumClient")}</p>
                             </motion.div>
                         )}
                     </div>
                     <Link
                         href="/login"
-                        className={`flex items-center justify-center ${isCollapsed ? "" : "space-x-2"} w-full py-3 text-muted hover:text-red-500 hover:bg-red-500/10 rounded-xl transition-colors mt-2`}
+                        className={`flex items-center justify-center ${isCollapsed ? "" : "space-x-2"} w-full py-3 text-muted hover:text-red-500 hover:bg-red-500/10 rounded-xl transition-colors mt-2 font-bold`}
                         title={isCollapsed ? t("signOut") : ""}
                     >
                         <LogOut size={16} />
@@ -143,9 +148,15 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </aside>
 
             {/* Main Content */}
-            <main className={`flex-1 flex flex-col min-h-screen relative overflow-hidden transition-all duration-300 ${isCollapsed ? "lg:ml-20" : "lg:ml-64"}`}>
-                {/* Top Header */}
-                <header className="h-20 border-b border-border flex items-center justify-between px-6 md:px-10 sticky top-0 bg-background/80 backdrop-blur-md z-30">
+            <main className="flex-1 flex flex-col min-h-screen relative overflow-hidden bg-[var(--main-content-bg)]">
+                {/* Top Header - Now Shadow-based */}
+                <header
+                    style={{
+                        left: !mounted ? 0 : (sidebarOpen ? 0 : (window.innerWidth >= 1024 ? (isCollapsed ? 80 : 256) : 0)),
+                        width: !mounted ? '100%' : (window.innerWidth >= 1024 ? `calc(100% - ${isCollapsed ? 80 : 256}px)` : '100%')
+                    }}
+                    className="h-20 flex items-center justify-between px-6 md:px-10 fixed top-0 bg-background/80 dark:bg-background/80 backdrop-blur-md z-40 transition-all duration-300 shadow-sm shadow-black/[0.03] dark:shadow-white/[0.02]"
+                >
                     <div className="flex items-center">
                         <button
                             suppressHydrationWarning
@@ -165,7 +176,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             <LanguageSwitcher />
                         </div>
                         <div className="relative">
-                            <Link 
+                            <Link
                                 href="/dashboard/messages"
                                 className="relative p-2.5 rounded-xl text-muted hover:text-accent-red hover:bg-accent-red/5 transition-all group flex items-center justify-center"
                             >
@@ -178,7 +189,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         </div>
 
                         <div className="relative">
-                            <button 
+                            <button
                                 suppressHydrationWarning
                                 onClick={() => setNotificationsOpen(!notificationsOpen)}
                                 className={`relative p-2 rounded-full transition-all ${notificationsOpen ? "bg-accent-red/20 text-accent-red" : "text-muted hover:text-foreground hover:bg-white/5"}`}
@@ -237,7 +248,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
                                             {notifications.length > 0 ? (
                                                 <div className="flex divide-x divide-border border-t border-border">
-                                                    <button 
+                                                    <button
                                                         onClick={clearNotifications}
                                                         className="flex-1 p-4 text-[10px] font-bold text-muted hover:text-accent-red hover:bg-black/5 dark:hover:bg-white/5 transition-all flex items-center justify-center uppercase tracking-widest"
                                                     >
@@ -263,10 +274,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     </div>
                 </header>
 
-                {/* Page Content */}
-                <div className="flex-1 p-6 md:p-10 relative">
-                    <SmoothScroll>
-                        {children}
+                {/* Page Content with Offset-Aware SmoothScroll */}
+                <div className="flex-1 relative">
+                    <SmoothScroll
+                        marginLeft={!mounted ? 0 : (window.innerWidth >= 1024 ? (isCollapsed ? 80 : 256) : 0)}
+                        width={!mounted ? '100%' : (window.innerWidth >= 1024 ? `calc(100% - ${isCollapsed ? 80 : 256}px)` : '100%')}
+                        paddingTop={80} // Header height
+                    >
+                        <div className="p-6 md:p-10">
+                            {children}
+                        </div>
                     </SmoothScroll>
                 </div>
             </main>
